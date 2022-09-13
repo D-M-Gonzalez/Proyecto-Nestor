@@ -1,0 +1,4 @@
+const HOME = 'HOME'
+const ABOUT_US = 'ABOUT_US'
+const OUR_SERVICES = 'OUR_SERVICES'
+const CONTACT = 'CONTACT'
