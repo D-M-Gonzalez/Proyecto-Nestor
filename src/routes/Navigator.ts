@@ -22,3 +22,4 @@ export default function Navigate(URL:string){
     }
     return rURL
 }
+

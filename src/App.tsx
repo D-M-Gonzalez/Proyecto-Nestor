@@ -6,19 +6,19 @@ import Home from './containers/Home/Home';
 import Layout from './containers/Layout/Layout';
 import Services from './containers/Services/Services';
 
-export interface IApplicationProps {}
+export interface IApplicationProps { }
 
 const App: React.FunctionComponent<IApplicationProps> = (props) => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/*" element={<Layout/>}>
-        <Route path="home" element={<Home/>}/>
-        <Route path="about_us" element={<AboutUs/>}/>
-        <Route path="services" element={<Services/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="*" element={<Error404 message="La página que estas buscando no existe"/>}/>
-    </Route>
+        <Route path="/*" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about_us" element={<AboutUs />} />
+          <Route path="services" element={<Services />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<Error404 message="La página que estas buscando no existe" />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   )
