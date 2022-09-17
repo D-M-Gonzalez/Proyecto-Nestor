@@ -1,4 +1,6 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@mui/material/styles';
+import { customTheme } from './MuiTheme';
 import AboutUs from './containers/AboutUs/AboutUs';
 import Contact from './containers/Contact/Contact';
 import Error404 from './containers/Error404/Error404';
@@ -9,19 +11,21 @@ import Services from './containers/Services/Services';
 export interface IApplicationProps {}
 
 const App: React.FunctionComponent<IApplicationProps> = (props) => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/*" element={<Layout/>}>
-        <Route path="home" element={<Home/>}/>
-        <Route path="about_us" element={<AboutUs/>}/>
-        <Route path="services" element={<Services/>}/>
-        <Route path="contact" element={<Contact/>}/>
-        <Route path="*" element={<Error404 message="La página que estas buscando no existe"/>}/>
-    </Route>
-      </Routes>
-    </BrowserRouter>
-  )
-}
+    return (
+        <BrowserRouter>
+            <ThemeProvider theme={customTheme}>
+                <Routes>
+                    <Route path="/*" element={<Layout />}>
+                        <Route path="home" element={<Home />} />
+                        <Route path="about_us" element={<AboutUs />} />
+                        <Route path="services" element={<Services />} />
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="*" element={<Error404 message="Página no encontrada" />} />
+                    </Route>
+                </Routes>
+            </ThemeProvider>
+        </BrowserRouter>
+    );
+};
 
 export default App;
