@@ -53,10 +53,10 @@ export const customTheme = createTheme({
                         lineHeight: '27.28px',
                         fontFamily: 'Nunito Sans',
                         '&:focus': {
-                            color: 'black'
+                            backgroundColor: '#22B573'
                         },
                         '&:hover': {
-                            backgroundColor: '#22B573'
+                            backgroundColor: 'rgb(150,150,150,0.35)'
                         }
                     }
                 },
@@ -66,13 +66,14 @@ export const customTheme = createTheme({
                         borderRadius: '10px',
                         borderStyle: 'solid',
                         borderWidth: '2px',
-                        borderColor: 'rgb(255, 255, 255, 0)',
+                        borderColor: '#22B573',
                         textTransform: 'unset',
                         padding: '4px',
                         paddingLeft: '20px',
                         paddingRight: '20px',
                         color: '#22B573',
                         fontSize: '20px',
+                        transition: '0s',
                         lineHeight: '27.28px',
                         fontFamily: 'Nunito Sans',
                         '&:focus': {
@@ -82,9 +83,10 @@ export const customTheme = createTheme({
                             borderRadius: '10px',
                             borderStyle: 'solid',
                             borderWidth: '2px',
-                            backgroundColor: 'rgb(255, 255, 255, 0)',
-                            borderColor: '#255957',
-                            color: '#255957'
+                            backdropFilter: 'brightness(150%)',
+                            background: 'linear-gradient(180deg, #22B573 0%, #255957 100%) border-box',
+                            color: 'rgb(255,255,255)',
+                            borderColor: 'rgb(255,255,255,0)'
                         }
                     }
                 }

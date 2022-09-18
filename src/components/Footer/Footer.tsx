@@ -20,6 +20,10 @@ const styles = {
         lineHeight: '27px',
         transition: 'color 0.25s',
         '&:hover': { color: '#22B573', cursor: 'pointer' }
+    },
+    socialMediaButtonsStyle: {
+        transition: 'filter 0.25s',
+        '&:hover': { filter: 'brightness(150%)' }
     }
 }
 
@@ -76,19 +80,19 @@ export default function Footer(FooterProps: FooterProps) {
     const IconList = [
         {
             id: 'FB',
-            component: <IconButton onClick={() => handleClick(FACEBOOK, true)}><FBIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+            component: <IconButton onClick={() => handleClick(FACEBOOK, true)} sx={styles.socialMediaButtonsStyle}><FBIcon sx={{ height: '3vw', width: '3vw' }} /></IconButton>
         },
         {
             id: 'LN',
-            component: <IconButton onClick={() => handleClick(LINKEDIN, true)}><LNIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+            component: <IconButton onClick={() => handleClick(LINKEDIN, true)} sx={styles.socialMediaButtonsStyle}><LNIcon sx={{ height: '3vw', width: '3vw' }} /></IconButton>
         },
         {
             id: 'IM',
-            component: <IconButton onClick={() => handleClick(INSTAGRAM, true)}><IMIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+            component: <IconButton onClick={() => handleClick(INSTAGRAM, true)} sx={styles.socialMediaButtonsStyle}><IMIcon sx={{ height: '3vw', width: '3vw' }} /></IconButton>
         },
         {
             id: 'TW',
-            component: <IconButton onClick={() => handleClick(TWITTER, true)}><TWIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+            component: <IconButton onClick={() => handleClick(TWITTER, true)} sx={styles.socialMediaButtonsStyle}><TWIcon sx={{ height: '3vw', width: '3vw', }} /></IconButton>
         },
     ]
 
@@ -128,7 +132,7 @@ export default function Footer(FooterProps: FooterProps) {
                 <Grid item container xs={2}>
                     {IconList.map((icon) => {
                         return (
-                            <Grid item xs={1.5}>
+                            <Grid item xs={3}>
                                 {icon.component}
                             </Grid>
                         )

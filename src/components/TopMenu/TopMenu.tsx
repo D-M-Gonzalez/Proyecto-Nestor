@@ -47,7 +47,8 @@ export const TopMenu = () => {
     {
       title: t('menus.contact'),
       key: 'contact',
-      variant: 'outlined',
+      variant: 'contained',
+      color: '#22B573',
       url: 'contact'
     }
   ];
@@ -152,7 +153,7 @@ export const TopMenu = () => {
               <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mx: 2, display: 'block' }}
+                  sx={{ my: 2, mx: 2, display: 'block', color: `${page.color ? page.color : "#fff"}`, '&: focus': { color: '#fff' } }}
                   variant={page.variant as keyof typeof Button}
                 >
                   {page.title}
