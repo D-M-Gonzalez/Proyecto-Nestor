@@ -7,7 +7,7 @@ export default function Home(props: IHomeProps) {
     return (
         <Box sx={{ height: '3400px' }}>
             <Button variant='outlined' sx={{ margin: '20px' }}>
-                Hola Mundo
+                HOLA MUNDO
             </Button>
         </Box>
     );

@@ -73,6 +73,7 @@ export const customTheme = createTheme({
                         paddingRight: '20px',
                         color: '#22B573',
                         fontSize: '20px',
+                        fontWeight: '600',
                         transition: '0s',
                         lineHeight: '27.28px',
                         fontFamily: 'Nunito Sans',
