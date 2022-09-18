@@ -1,11 +1,13 @@
 import { Box, Container, Grid, IconButton, SvgIcon, Typography } from '@mui/material'
-import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
-import React from 'react'
 import { useTranslation } from 'react-i18next';
 import FBIcon from '../Icons/FBIcon';
+import LNIcon from '../Icons/LNIcon';
+import TWIcon from '../Icons/TWIcon';
+import IMIcon from '../Icons/IMIcon';
+import { HOME, SERVICES, CONTACT, ABOUT_US, FACEBOOK, LINKEDIN, INSTAGRAM, TWITTER } from '../../constants/routePaths';
 
 export interface FooterProps {
-
+    handleClick: (link: string, external?: boolean) => void
 }
 
 const styles = {
@@ -22,6 +24,7 @@ const styles = {
 }
 
 export default function Footer(FooterProps: FooterProps) {
+    const { handleClick } = FooterProps
     const { t, i18n } = useTranslation();
 
     const MenuList = [
@@ -31,19 +34,19 @@ export default function Footer(FooterProps: FooterProps) {
         },
         {
             id: 'home',
-            component: <Typography variant='main' sx={styles.secondaryTextStyle}>{t('menus.home')}</Typography>,
+            component: <Typography onClick={() => handleClick(HOME)} variant='main' sx={styles.secondaryTextStyle}>{t('menus.home')}</Typography>,
         },
         {
             id: 'services',
-            component: <Typography variant='main' sx={styles.secondaryTextStyle}>{t('menus.services')}</Typography>,
+            component: <Typography onClick={() => handleClick(SERVICES)} variant='main' sx={styles.secondaryTextStyle}>{t('menus.services')}</Typography>,
         },
         {
             id: 'about_us',
-            component: <Typography variant='main' sx={styles.secondaryTextStyle}>{t('menus.about_us')}</Typography>,
+            component: <Typography onClick={() => handleClick(ABOUT_US)} variant='main' sx={styles.secondaryTextStyle}>{t('menus.about_us')}</Typography>,
         },
         {
             id: 'contact',
-            component: <Typography variant='main' sx={styles.secondaryTextStyle}>{t('menus.contact')}</Typography>,
+            component: <Typography onClick={() => handleClick(CONTACT)} variant='main' sx={styles.secondaryTextStyle}>{t('menus.contact')}</Typography>,
         }
     ]
 
@@ -68,6 +71,25 @@ export default function Footer(FooterProps: FooterProps) {
             id: 'country',
             component: <Typography variant='main'>Argentina</Typography>
         }
+    ]
+
+    const IconList = [
+        {
+            id: 'FB',
+            component: <IconButton onClick={() => handleClick(FACEBOOK, true)}><FBIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+        },
+        {
+            id: 'LN',
+            component: <IconButton onClick={() => handleClick(LINKEDIN, true)}><LNIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+        },
+        {
+            id: 'IM',
+            component: <IconButton onClick={() => handleClick(INSTAGRAM, true)}><IMIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+        },
+        {
+            id: 'TW',
+            component: <IconButton onClick={() => handleClick(TWITTER, true)}><TWIcon sx={{ height: '42.71px', width: '42.71' }} /></IconButton>
+        },
     ]
 
 
@@ -102,15 +124,16 @@ export default function Footer(FooterProps: FooterProps) {
                         </Grid>
                     </Box>
                 </Grid>
-                <Grid item container xs={4}>
-
-                </Grid>
+                <Grid item container xs={3} />
                 <Grid item container xs={2}>
-                    <Grid item xs={4}>
-                        <IconButton>
-                            <FBIcon sx={{ width: '150px', height: '50px', viewBox: "10px" }} />
-                        </IconButton>
-                    </Grid>
+                    {IconList.map((icon) => {
+                        return (
+                            <Grid item xs={1.5}>
+                                {icon.component}
+                            </Grid>
+                        )
+                    })}
+                    <Grid item container xs={1} />
                 </Grid>
             </Grid>
         </Box>
