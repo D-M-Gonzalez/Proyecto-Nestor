@@ -1,0 +1,11 @@
+{
+    "menus": {
+        "home": "Inicio",
+        "about_us": "Sobre Nosotros",
+        "services": "Servicios",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "menu": "Menu"
+    }
+}

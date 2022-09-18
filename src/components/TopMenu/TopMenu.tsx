@@ -10,30 +10,10 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
-import logo from '../../assets/logo-dream-do-it-dark.svg'
+import logo from '../../assets/logo-dream-do-it-dark.svg';
+import { useTranslation } from 'react-i18next';
 
 //import Navigate from '../../routes/Navigator';
-
-
-
-const pages = [
-  {
-    title: 'home',
-    url: '/'
-  },
-  {
-    title: 'about us',
-    url: 'about_us'
-  },
-  {
-    title: 'services',
-    url: 'services'
-  },
-  {
-    title: 'contact',
-    url: 'contact'
-  }
-];
 
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -43,6 +23,34 @@ export const TopMenu = () => {
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+  const { t, i18n } = useTranslation();
+
+  const pages = [
+    {
+      title: t('menus.home'),
+      key: 'home',
+      variant: 'contained',
+      url: '/'
+    },
+    {
+      title: t('menus.about_us'),
+      key: 'about_us',
+      variant: 'contained',
+      url: 'about_us'
+    },
+    {
+      title: t('menus.services'),
+      key: 'services',
+      variant: 'contained',
+      url: 'services'
+    },
+    {
+      title: t('menus.contact'),
+      key: 'contact',
+      variant: 'outlined',
+      url: 'contact'
+    }
+  ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -50,6 +58,10 @@ export const TopMenu = () => {
   const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElUser(event.currentTarget);
   };
+
+  const handleLanguaje = (languaje: string) => {
+    i18n.changeLanguage(languaje)
+  }
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -61,7 +73,7 @@ export const TopMenu = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl" sx={{ backgroundColor: '#0A1128' }}>
         <Toolbar disableGutters>
           <Box component="img" sx={{ width: 220, display: { xs: 'none', md: 'flex' } }} src={logo} />
           <Typography
@@ -111,8 +123,8 @@ export const TopMenu = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page.title} onClick={handleCloseNavMenu}>
-                  <Link to={page.title} style={{ textDecoration: "none", color: "#000" }}><Typography textAlign="center">{page.title}</Typography></Link>
+                <MenuItem key={page.key} onClick={handleCloseNavMenu}>
+                  <Link to={page.url} style={{ textDecoration: "none", color: "#000" }}><Typography textAlign="center">{page.title}</Typography></Link>
                 </MenuItem>
               ))}
             </Menu>
@@ -137,11 +149,11 @@ export const TopMenu = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, justifyContent: 'right', display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
-              <Link to={page.url} key={page.title} style={{ textDecoration: "none", color: "#fff" }}>
+              <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mx: 2, color: 'white', display: 'block' }}
-                  variant="contained"
+                  sx={{ my: 2, mx: 2, display: 'block' }}
+                  variant={page.variant as keyof typeof Button}
                 >
                   {page.title}
                 </Button>
@@ -150,8 +162,34 @@ export const TopMenu = () => {
 
             ))}
           </Box>
+          <Box>
+            <Button
+              id='ES'
+              variant='outlined'
+              onClick={() => handleLanguaje('es')}
+              sx={{
+                borderRadius: '0px', '&:hover': {
+                  borderRadius: '0px',
+                }
+              }}
+            >
+              ES
+            </Button>
+            <Button
+              id='EN'
+              variant='outlined'
+              onClick={() => handleLanguaje('en')}
+              sx={{
+                borderRadius: '0px', '&:hover': {
+                  borderRadius: '0px',
+                }
+              }}
+            >
+              EN
+            </Button>
+          </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   )
 }

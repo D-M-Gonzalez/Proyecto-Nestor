@@ -1,8 +1,12 @@
+import { Box, Typography } from '@mui/material';
 import React from 'react';
 
-export interface IHomeProps {}
+export interface IHomeProps { }
 
 export default function Home(props: IHomeProps) {
-    console.log('asd');
-    return <div>Home</div>;
+    return (
+        <Box sx={{ height: '3400px' }}>
+            <Typography>Home</Typography>
+        </Box>
+    );
 }

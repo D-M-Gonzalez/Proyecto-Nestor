@@ -1,0 +1,11 @@
+{
+    "menus": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "footer": {
+        "menu": "Menu"
+    }
+}
