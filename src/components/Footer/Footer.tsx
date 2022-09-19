@@ -98,8 +98,8 @@ export default function Footer(FooterProps: FooterProps) {
 
 
     return (
-        <Box pb={5}>
-            <Container sx={{ backgroundColor: 'rgb(207, 211, 207, 0.5)', height: '2px' }} />
+        <Box position='relative' bottom='200px' sx={{ height: '0px' }}>
+            <Box sx={{ marginX: '5vw', backgroundColor: 'rgb(207, 211, 207, 0.5)', height: '2px' }} />
             <Grid container mt={3}>
                 <Grid item xs={1} />
                 <Grid item container xs={2}>
@@ -107,7 +107,7 @@ export default function Footer(FooterProps: FooterProps) {
                         <Grid container>
                             {MenuList.map((item) => {
                                 return (
-                                    <Grid xs={12} key={item.id}>
+                                    <Grid item xs={12} key={item.id}>
                                         {item.component}
                                     </Grid>
                                 )
@@ -120,7 +120,7 @@ export default function Footer(FooterProps: FooterProps) {
                         <Grid container>
                             {ContactList.map((item) => {
                                 return (
-                                    <Grid xs={12} key={item.id}>
+                                    <Grid item xs={12} key={item.id}>
                                         {item.component}
                                     </Grid>
                                 )

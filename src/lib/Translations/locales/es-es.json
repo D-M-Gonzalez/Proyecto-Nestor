@@ -7,5 +7,25 @@
     },
     "footer": {
         "menu": "Menu"
+    },
+    "home": {
+        "cards": {
+            "meeting": {
+                "title": "Encuentros",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "search": {
+                "title": "Búsquedas",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "interviews": {
+                "title": "Entrevistas",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "hiring": {
+                "title": "Presentación",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }
+        }
     }
 }

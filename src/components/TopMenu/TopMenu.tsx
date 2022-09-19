@@ -73,8 +73,8 @@ export const TopMenu = () => {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl" sx={{ backgroundColor: '#0A1128' }}>
+    <AppBar position='absolute' sx={{ backgroundColor: '#0A1128', height: '100px' }}>
+      <Box mt={1.5} sx={{ marginX: '5vw' }}>
         <Toolbar disableGutters>
           <Box component="img" sx={{ width: 220, display: { xs: 'none', md: 'flex' } }} src={logo} />
           <Typography
@@ -190,7 +190,7 @@ export const TopMenu = () => {
             </Button>
           </Box>
         </Toolbar>
-      </Container>
+      </Box>
     </AppBar >
   )
 }

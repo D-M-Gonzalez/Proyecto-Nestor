@@ -45,11 +45,11 @@ export const customTheme = createTheme({
                         backgroundColor: 'rgb(255, 255, 255, 0)',
                         boxShadow: 'none',
                         textTransform: 'unset',
-                        padding: '6px',
+                        padding: '10px',
                         paddingLeft: '20px',
                         paddingRight: '20px',
                         color: 'white',
-                        fontSize: '20px',
+                        fontSize: '30px',
                         lineHeight: '27.28px',
                         fontFamily: 'Nunito Sans',
                         '&:focus': {
