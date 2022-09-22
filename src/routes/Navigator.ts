@@ -10,8 +10,8 @@ export default function Navigate(URL: string) {
         case 'HOME':
             rURL = '/';
             break;
-        case 'ABOUT_US':
-            rURL = '/about_us';
+        case 'ABOUT-US':
+            rURL = '/about-us';
             break;
         case 'SERVICES':
             rURL = '/services';
