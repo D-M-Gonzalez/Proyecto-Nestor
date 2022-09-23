@@ -1,7 +1,7 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import HomeImage from '../../assets/HomeTech.png';
+import HomeImage from '../../assets/HomeRecruit.png';
 import HomeCard from '../../components/Cards/HomeCard';
 
 const background = {
@@ -18,28 +18,28 @@ export default function Home(props: IHomeProps) {
 
     const CardList = [
         {
-            id: 'survey',
-            title: t('home.cards.survey.title'),
-            text: t('home.cards.survey.text'),
-            image: '/assets/NotesLogo.svg'
+            id: 'meeting',
+            title: t('home.cards.meeting.title'),
+            text: t('home.cards.meeting.text'),
+            image: '/assets/MeetingLogo.svg'
         },
         {
-            id: 'strategy',
-            title: t('home.cards.strategy.title'),
-            text: t('home.cards.strategy.text'),
-            image: '/assets/ArcheryLogo.svg'
+            id: 'search',
+            title: t('home.cards.search.title'),
+            text: t('home.cards.search.text'),
+            image: '/assets/SearchLogo.svg'
         },
         {
-            id: 'implementation',
-            title: t('home.cards.implementation.title'),
-            text: t('home.cards.implementation.text'),
-            image: '/assets/CloudLogo.svg'
+            id: 'interviews',
+            title: t('home.cards.interviews.title'),
+            text: t('home.cards.interviews.text'),
+            image: '/assets/InterviewsLogo.svg'
         },
         {
-            id: 'training',
-            title: t('home.cards.training.title'),
-            text: t('home.cards.training.text'),
-            image: '/assets/SignLogo.svg'
+            id: 'hiring',
+            title: t('home.cards.hiring.title'),
+            text: t('home.cards.hiring.text'),
+            image: '/assets/HiringLogo.svg'
         },
     ]
 
@@ -56,17 +56,17 @@ export default function Home(props: IHomeProps) {
                         <Grid item xs={0.5} />
                         <Grid item container xs={5}>
                             <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 50, md: 40 }} fontWeight={400} lineHeight={1.5}>
-                                {t('home.main.migration_title')}
+                                HOW TO CHOOSE THE RIGHT SERVICE FOR YOUR BUSINESS?
                             </Typography>
                             <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 20, md: 15 }} fontWeight={400} lineHeight={1.2}>
-                                {t('home.main.migration_text')}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </Typography>
                         </Grid>
                         <Grid item xs={6.5} />
                         <Grid item xs={0.5} />
                         <Grid item container xs={7} mt={5}>
                             <Button variant='outlined'>
-                                {t('home.buttons.ask_about_services')}
+                                CALL TO ACTION
                             </Button>
                         </Grid>
                     </Grid>
@@ -76,13 +76,10 @@ export default function Home(props: IHomeProps) {
                         <Grid item xs={0.5} />
                         <Grid item container xs={6}>
                             <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 60, md: 50 }} fontWeight={400} lineHeight={1.5}>
-                                {t('home.main.implementation_title')}
+                                ABOUT OUR SELECTION PROCESS
                             </Typography>
                             <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20 }} fontWeight={400} lineHeight={1.2}>
-                                {t('home.main.implementation_text_1')}
-                            </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20 }} fontWeight={400} lineHeight={1.2}>
-                                {t('home.main.implementation_text_2')}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </Typography>
                         </Grid>
                         <Grid item xs={5.5} />
@@ -106,7 +103,7 @@ export default function Home(props: IHomeProps) {
                         <Grid item xs={0.5} />
                         <Grid item container xs={6}>
                             <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20 }} fontWeight={400} lineHeight={1.2}>
-                                {t('home.main.implementation_text_3')}
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                             </Typography>
                         </Grid>
                         <Grid item xs={5.5} />
@@ -116,8 +113,11 @@ export default function Home(props: IHomeProps) {
                     <Grid container mt={15}>
                         <Grid item xs />
                         <Grid item container xs={8} justifyContent='center'>
+                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 60, md: 50 }} fontWeight={400} lineHeight={1.5} sx={{ textAlign: 'center' }} >
+                                ARE YOU READY TO START LOOKING FOR YOUR NEW IT RESOURCE?
+                            </Typography>
                             <Button variant='outlined' sx={{ marginTop: '70px' }}>
-                                {t('home.buttons.begin')}
+                                CALL TO ACTION
                             </Button>
                         </Grid>
                         <Grid item xs />

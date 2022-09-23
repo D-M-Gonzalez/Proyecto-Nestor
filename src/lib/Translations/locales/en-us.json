@@ -9,6 +9,19 @@
         "menu": "Menu"
     },
     "home": {
+        "main": {
+            "migration_title": "MIGRACIÓN A INFRAESTRUCTURA CLOUD",
+            "migration_text": "Te acompañamos en el camino de la transformación digital. Bajo la cultura DevOps, creamos CI/CD para acelerar los tiempos de operaciones, y realizamos automatización de infraestructura Cloud, sosteniendo los principios de segurar en la nube",
+            "implementation_title": "IMPLEMENTACIÓN DE CI/CD",
+            "implementation_text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo. Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
+            "implementation_text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
+            "implementation_text_3": "Migrar a la nube les permite a las empresas contar con los recursos en tiempo y forma para el negocio a un menor costo. Además nos ocupamos de todo, liberando mucho tiempo a las compañías para que puedan ocuparse de lo realmente importante: los negocios.",
+            "ready_title": "¿ESTÁS LISTOS PARA MODERNIZARTE?"
+        },
+        "buttons": {
+            "ask_about_services": "ASK ABOUT SERVICES",
+            "begin": "LET'S BEGIN"
+        },
         "cards": {
             "meeting": {
                 "title": "Meeting",
@@ -25,6 +38,22 @@
             "hiring": {
                 "title": "Hiring",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "survey": {
+                "title": "Survey",
+                "text": "Asesoramiento y asistencia de expertos en lo que necesita ser automatizado para lograr los objetivos del negocio y cómo implementar la mejor solución."
+            },
+            "strategy": {
+                "title": "Strategy",
+                "text": "A partir de la solución elegida, se diagrama, se establece el alcance, se pactan tiempos y entregables en lo que dura el proceso."
+            },
+            "implementation": {
+                "title": "Implementation",
+                "text": "Desarrollo de soluciones, en base a tiempos y entregables pactados, estableciendo reuniones con los equipos técnicos involucrados."
+            },
+            "training": {
+                "title": "Training",
+                "text": "Transmición del conocimiento sobre la infraestructura desarrollada para que los equipos técnicos tomen el mando de los mismos."
             }
         }
     }
