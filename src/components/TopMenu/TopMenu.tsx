@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import logo from '../../assets/logo-dream-do-it-dark.svg';
 import { useTranslation } from 'react-i18next';
+import { Switch } from '@mui/material';
 
 //import Navigate from '../../routes/Navigator';
 
@@ -188,6 +189,7 @@ export const TopMenu = () => {
             >
               EN
             </Button>
+            <Switch onChange={(event, boolean) => (boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
           </Box>
         </Toolbar>
       </Box>
