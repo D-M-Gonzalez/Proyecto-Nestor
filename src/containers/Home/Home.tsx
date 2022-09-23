@@ -63,10 +63,10 @@ export default function Home(props: IHomeProps) {
                     <Grid container mt={15}>
                         <Grid item xs={0.5} />
                         <Grid item container xs={5}>
-                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, md: 50, xs: 30 }} fontWeight={400} lineHeight={1.5}>
+                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('home.main.migration_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('home.main.migration_text')}
                             </Typography>
                         </Grid>
@@ -83,13 +83,13 @@ export default function Home(props: IHomeProps) {
                     <Grid container mt={35}>
                         <Grid item xs={0.5} />
                         <Grid item container xs={6}>
-                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, md: 50, xs: 30 }} fontWeight={400} lineHeight={1.5}>
+                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('home.main.implementation_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('home.main.implementation_text_1')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('home.main.implementation_text_2')}
                             </Typography>
                         </Grid>
@@ -113,7 +113,7 @@ export default function Home(props: IHomeProps) {
                     <Grid container mt={15}>
                         <Grid item xs={0.5} />
                         <Grid item container xs={6}>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, md: 20, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('home.main.implementation_text_3')}
                             </Typography>
                         </Grid>
