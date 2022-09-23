@@ -56,5 +56,38 @@
                 "text": "Transmición del conocimiento sobre la infraestructura desarrollada para que los equipos técnicos tomen el mando de los mismos."
             }
         }
+    },
+    "services": {
+        "main": {
+            "services_title": "Servicios",
+            "services_text_1": "La tecnología necesaria para adoptar la verdadera transformación digital.",
+            "services_text_2": "Soluciones de TI especialmente diseñadas para ofrecer niveles de rendimiento, seguridad y fiabilidad excepcionalmente altos; con el mejor soporte técnico y a un precio competitivo."
+        },
+        "cards":{
+            "implementation":{
+                "title": "Implementación",
+                "text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo (CI/CD). Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
+                "text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
+                "text_3": "Preparamos y capacitamos consultores DevOps, contando con varios años de experiencia en el área."
+            },
+            "advice":{
+                "title": "Asesoramiento en Ciberseguridad",
+                "text_1": "Los datos son el activo más valioso que las empresas poseen. Son la materia prima a partir de la cual pueden desarrollar proyectos y tomar decisiones. En vista de ese valor, es indispensable para las empresas darles los niveles de seguridad correspondientes.",
+                "text_2": "La seguridad de bases de datos se consigue mediante una serie de implementaciones, medidas y diagnósticos. El objetivo de todo eso es asegurarse de que ninguna amenaza, ya sea interna o externa, pueda alterar los datos con los que una empresa trabaja.",
+                "text_3": "Por ello, asesoramos a empresas en materia de seguridad , normas vigentes y capacitaciones."
+            },
+            "outsourcing":{
+                "title": "Outsourcing",
+                "text_1": "Somos tu equipo especialista en outsourcing tecnológico y de sistemas. ",
+                "text_2": "Nos encargamos de administrar la infraestructura IT de tu empresa, ayudándote a minimizar riesgos y reducir costos aportando experiencia y calidad en cada uno de los proyectos. De esta manera podrás externalizar tu departamento tecnológico o informático. ",
+                "text_3": "Abordamos tanto proyectos concretos como la gestión completa del área de sistemas."
+            },
+            "recruitment":{
+                "title": "Recruitment",
+                "text_1": "Nuestros procesos de búsqueda de talento alcanzan el éxito gracias a nuestro enfoque en lograr la sinergia entre: las características de personalidad, competencias y valores de las personas con la cultura organizacional y preferencias de nuestros clientes. ",
+                "text_2": "Realizamos reclutamiento y contratación IT. ",
+                "text_3": "En base a las características requeridas por nuestros clientes, evaluamos y perfilamos a los candidatos que cumplan con los requisitos demandados para el puesto y así se adapten 100% a tu empresa."
+            }
+        }
     }
 }
