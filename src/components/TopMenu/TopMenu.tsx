@@ -156,7 +156,7 @@ export const TopMenu = () => {
             <Stack direction="row" alignItems="center">
               <LanguageIcon sx={{ mr: 2, fontSize: 30 }} />
               <Typography>ES</Typography>
-              <Switch defaultChecked color="success" onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+              <Switch defaultChecked onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
               <Typography>EN</Typography>
             </Stack>
           </Box>
