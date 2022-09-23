@@ -14,7 +14,7 @@ const background = {
 export interface IHomeProps { }
 
 export default function Home(props: IHomeProps) {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const CardList = [
         {
