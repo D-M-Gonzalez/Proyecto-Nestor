@@ -64,7 +64,7 @@ export const TopMenu = () => {
   };
 
   return (
-    <AppBar position='sticky' sx={{ backgroundColor: '#0A1128', height: '100px' }}>
+    <AppBar position='absolute' sx={{ backgroundColor: '#0A1128', height: '100px' }}>
       <Box mt={1.5} sx={{ marginX: '5vw' }}>
         <Toolbar disableGutters>
           <Box component="img" sx={{ width: 300, display: { xs: 'none', md: 'flex' } }} src={logo} />
@@ -156,7 +156,9 @@ export const TopMenu = () => {
             <Stack direction="row" alignItems="center">
               <LanguageIcon sx={{ mr: 2, fontSize: 30 }} />
               <Typography>ES</Typography>
-              <Switch defaultChecked onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+              <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
+                <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+              </Box>
               <Typography>EN</Typography>
             </Stack>
           </Box>
