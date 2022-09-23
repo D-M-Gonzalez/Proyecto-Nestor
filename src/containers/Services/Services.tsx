@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 import ServiceCard from '../../components/Cards/ServiceCard';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Button, Grid, Typography } from '@mui/material';
-import ServiceHero from '../../assets/services-hero.png';
+import Servicios from '../../assets/Servicios.png';
 
 const background = {
-    width: "auto",
-    height: "50vw",
-    backgroundImage: `url(${ServiceHero})`,
+    width: "98.8vw",
+    height: "250vw",
+    backgroundImage: `url(${Servicios})`,
     backgroundSize: 'cover',
 }
 
@@ -59,8 +59,13 @@ export default function Services(props: IServicesProps) {
     ]
 
     return (
-        <>
-            <Box style={background}>
+        <Box
+            display="flex"
+            mt={-5}
+            flexDirection="column"
+            alignItems="center"
+        >
+            <div style={background}>
                 <Box display="flex" mt={10}>
                     <Grid container mt={15}>
                         <Grid item xs={0.5} />
@@ -77,15 +82,10 @@ export default function Services(props: IServicesProps) {
                         </Grid>
                     </Grid>
                 </Box>
-
-            </Box>
-            <Box mt={0}>
-                {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text_1={card.text_1} text_2={card.text_2} text_3={card.text_3} image={card.image} />))}
-            </Box>
-
-
-
-
-        </>
+                <Box mt={50}>
+                    {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text_1={card.text_1} text_2={card.text_2} text_3={card.text_3} image={card.image} />))}
+                </Box>
+            </div>
+        </Box>
     );
 }
