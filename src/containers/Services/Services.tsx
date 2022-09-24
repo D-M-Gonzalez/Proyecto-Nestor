@@ -2,10 +2,8 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import ServiceCard from '../../components/Cards/ServiceCard';
 import { useImageMultiplier } from '../../store/Main';
-import { Box, Button, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Typography } from '@mui/material';
 import ServiceHero from '../../assets/services-hero.png';
-import { styled } from '@mui/material/styles';
-import { indigo, deepPurple, purple } from '@mui/material/colors';
 
 const imageHero = {
     width: "auto",
@@ -84,7 +82,6 @@ export default function Services(props: IServicesProps) {
             <Box mt={0}>
                 {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text_1={card.text_1} text_2={card.text_2} text_3={card.text_3} image={card.image} />))}
             </Box>
-
         </>
     );
 }
