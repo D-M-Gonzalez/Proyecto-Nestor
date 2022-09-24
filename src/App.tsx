@@ -17,7 +17,7 @@ const App: React.FunctionComponent<IApplicationProps> = (props) => {
         <Routes>
           <Route path="/*" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="about_us" element={<AboutUs />} />
+            <Route path="about-us" element={<AboutUs />} />
             <Route path="services" element={<Services />} />
             <Route path="contact" element={<Contact />} />
             <Route path="*" element={<Error404 message="La página que estas buscando no existe" />} />

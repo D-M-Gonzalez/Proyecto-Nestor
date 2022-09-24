@@ -89,5 +89,26 @@
                 "text_3": "En base a las características requeridas por nuestros clientes, evaluamos y perfilamos a los candidatos que cumplan con los requisitos demandados para el puesto y así se adapten 100% a tu empresa."
             }
         }
+    },
+        "about_us": {
+        "main": {
+            "about_us_title": "Quienes Somos",
+            "about_us_text_1": "Apasionados por la tecnología y la mejora contínua.",
+            "about_us_text_2": "Dream & Do IT es un emprendimiento de consultorías en el área IT con más de 4 años de experiencia."
+        },
+        "cards":{
+            "vision":{
+                "title": "Visión",
+                "text": "Ser referentes en la formación y empleabilidad de talentos en desarrollo de operaciones en seguridad informática."
+            },
+            "mision":{
+                "title": "Misión",
+                "text": "Formar y brindar recursos que aporten a las soluciones que requieren nuestros clientes."
+            },
+            "values":{
+                "title": "Valores",
+                "text": "La responsabilidad, la experiencia, el trabajo en equipo, la eficiencia y la mejora contínua."
+            }
+        }
     }
 }
