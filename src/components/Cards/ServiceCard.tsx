@@ -15,10 +15,7 @@ export default function ServiceCard(props: CardProps) {
 
   return (
     <>
-
-
-
-      <Box display="flex" m={10}>
+      <Box display="flex" m={10} >
         <Grid container mt={10}>
           <Box mt={5}>
             <Box

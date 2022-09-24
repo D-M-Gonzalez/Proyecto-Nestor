@@ -15,8 +15,7 @@ type GradientBoxProps = {
   colors?: string[];
 };
 const GradientBox = styled(Box)<GradientBoxProps>(() => ({
-  background: `linear-gradient(135.44deg, #0A1128 0%, #22B573 247.42%)`
-  ,
+  background: `linear-gradient(135.44deg, #0A1128 0%, #22B573 247.42%)`,
 }));
 
 export default function Layout(props: ILayoutProps) {

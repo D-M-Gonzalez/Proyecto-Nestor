@@ -7,22 +7,12 @@ import ServiceHero from '../../assets/services-hero.png';
 import { styled } from '@mui/material/styles';
 import { indigo, deepPurple, purple } from '@mui/material/colors';
 
-const background = {
+const imageHero = {
     width: "auto",
     height: "50vw",
     backgroundImage: `url(${ServiceHero})`,
     backgroundSize: 'cover',
 }
-
-type GradientBoxProps = {
-    colors?: string[];
-};
-const GradientBox = styled(Box)<GradientBoxProps>(({ colors }) => ({
-    color: 'white',
-    ...(colors && {
-        background: `linear-gradient(135.44deg, #0A1128 0%, #22B573 247.42%)`,
-    }),
-}));
 
 export interface IServicesProps { }
 
@@ -72,7 +62,7 @@ export default function Services(props: IServicesProps) {
 
     return (
         <>
-            <Box style={background}>
+            <Box style={imageHero}>
                 <Box display="flex" mt={10}>
                     <Grid container mt={15}>
                         <Grid item xs={0.5} />
@@ -80,10 +70,10 @@ export default function Services(props: IServicesProps) {
                             <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('services.main.services_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_1')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_2')}
                             </Typography>
                         </Grid>
@@ -94,24 +84,6 @@ export default function Services(props: IServicesProps) {
             <Box mt={0}>
                 {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text_1={card.text_1} text_2={card.text_2} text_3={card.text_3} image={card.image} />))}
             </Box>
-
-            <GradientBox
-                colors={['#0A1128', '#0A1128', '#22B573', '#0A1128', '#0A1128']}
-                height='800px'
-            >
-                <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
-                    {t('services.main.services_text_2')}
-                </Typography>
-
-            </GradientBox>
-
-            <Box>
-
-
-            </Box>
-
-
-
 
         </>
     );
