@@ -7,8 +7,17 @@ import { TopMenu } from '../../components/TopMenu/TopMenu';
 import ToTopButton from '../../components/ToTopButton/ToTopButton';
 import Navigate from '../../routes/Navigator';
 import Main from '../../store/Main';
+import { styled } from '@mui/material/styles';
 
 export interface ILayoutProps { }
+
+type GradientBoxProps = {
+  colors?: string[];
+};
+const GradientBox = styled(Box)<GradientBoxProps>(() => ({
+  background: `linear-gradient(135.44deg, #0A1128 0%, #22B573 247.42%)`
+  ,
+}));
 
 export default function Layout(props: ILayoutProps) {
   const nav = useNavigate()
@@ -26,11 +35,11 @@ export default function Layout(props: ILayoutProps) {
   }
 
   return (
-    <Box sx={{ backgroundColor: '#0A1128' }}>
+    <GradientBox >
       <TopMenu />
       <Main layoutRef={layoutRef}></Main>
       <Footer handleClick={handleNavigationClick} />
       <ToTopButton handleClick={handleToTopClick} />
-    </Box>
+    </GradientBox>
   );
 }
