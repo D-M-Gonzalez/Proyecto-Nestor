@@ -1,5 +1,6 @@
 import { Box, Container, ImageList, Paper, Typography } from '@mui/material'
-import React from 'react'
+import { useEffect } from 'react';
+import { useImageMultiplier } from '../../store/Main';
 import styles from './Logo.module.css';
 
 export interface CardProps {
@@ -10,20 +11,19 @@ export interface CardProps {
 
 export default function HomeCard(props: CardProps) {
     const { title, text, image } = props
+    const { imageSizeMultiplier: ImgX } = useImageMultiplier();
 
     return (
-        <Paper elevation={10} sx={{ width: '300px', height: '365px', backgroundColor: 'rgb(255,255,255,0.15)', borderRadius: '20px', backdropFilter: 'blur(10px)' }}>
+        <Paper elevation={10} sx={{ width: `${220 * ImgX * ImgX}px`, height: `${300 * ImgX * ImgX}px`, backgroundColor: 'rgb(255,255,255,0.15)', borderRadius: `${20 * ImgX * ImgX}px`, backdropFilter: 'blur(10px)' }}>
             <Box
                 display='flex'
                 flexDirection='column'
                 alignItems="center"
             >
-                <Box mt={5}>
-                    <img className={styles.logo} src={image} />
-                </Box>
+                <Box mt={{ xl: 5, md: 3, sm: 2, xs: 2 }} component='img' src={image} sx={{ width: `${30 * ImgX}%` }} />
                 <Box mt={3} sx={{ width: '70%' }}>
-                    <Typography fontFamily='Nunito Sans' fontSize={20} color='white'>{title}</Typography>
-                    <Typography fontFamily='Nunito Sans' fontSize={15} color='white'>{text}</Typography>
+                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 30, lg: 22, md: 16, sm: 10, xs: 10 }} color='white'>{title}</Typography>
+                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 16, lg: 13, md: 10, sm: 5.5, xs: 4 }} color='white'>{text}</Typography>
                 </Box>
             </Box>
         </Paper>

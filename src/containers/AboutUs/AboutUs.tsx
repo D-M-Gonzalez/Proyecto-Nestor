@@ -62,10 +62,26 @@ export default function AboutUs(props: IAboutUsProps) {
                         </Grid>
                     </Grid>
                 </Box>
-
+            </Box>
+            <Box display="flex">
+                <Grid container>
+                    <Grid item xs={0.5} />
+                    <Grid item container xs={6}>
+                        <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                            {t('about_us.main.vision_title')}
+                        </Typography>
+                        <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            {t('about_us.main.vision_text_1')}
+                        </Typography>
+                        <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            {t('about_us.main.vision_text_2')}
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={5.5} />
+                </Grid>
             </Box>
 
-            <Box display="flex" mt={10} mb={30}>
+            <Box display="flex" mt={10} mb={60}>
                 <Grid container mt={20}>
                     <Grid item xs />
                     {CardList.map((card) => {

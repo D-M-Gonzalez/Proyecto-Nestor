@@ -26,40 +26,36 @@ export default function Services(props: IServicesProps) {
         {
             id: 'implementation',
             title: t('services.cards.implementation.title'),
-            text_1: t('services.cards.implementation.text_1'),
-            text_2: t('services.cards.implementation.text_2'),
-            text_3: t('services.cards.implementation.text_3'),
-            image: '/assets/automatizacion-infraestructura-cloud.png'
+            text: [t('services.cards.implementation.text_1'), t('services.cards.implementation.text_2'), t('services.cards.implementation.text_3'),],
+            image: '/assets/automatizacion-infraestructura-cloud.png',
+            reverse: false
         },
         {
             id: 'advice',
             title: t('services.cards.advice.title'),
-            text_1: t('services.cards.advice.text_1'),
-            text_2: t('services.cards.advice.text_2'),
-            text_3: t('services.cards.advice.text_3'),
-            image: '/assets/asesoramiento-ciberseguridad.png'
+            text: [t('services.cards.advice.text_1'), t('services.cards.advice.text_2'), t('services.cards.advice.text_3'),],
+            image: '/assets/asesoramiento-ciberseguridad.png',
+            reverse: true
         },
         {
             id: 'outsourcing',
             title: t('services.cards.outsourcing.title'),
-            text_1: t('services.cards.outsourcing.text_1'),
-            text_2: t('services.cards.outsourcing.text_2'),
-            text_3: t('services.cards.outsourcing.text_3'),
-            image: '/assets/outsourcing.png'
+            text: [t('services.cards.outsourcing.text_1'), t('services.cards.outsourcing.text_2'), t('services.cards.outsourcing.text_3'),],
+            image: '/assets/outsourcing.png',
+            reverse: false
         },
         {
             id: 'recruitment',
             title: t('services.cards.recruitment.title'),
-            text_1: t('services.cards.recruitment.text_1'),
-            text_2: t('services.cards.recruitment.text_2'),
-            text_3: t('services.cards.recruitment.text_3'),
-            image: '/assets/recruitment.png'
+            text: [t('services.cards.recruitment.text_1'), t('services.cards.recruitment.text_2'), t('services.cards.recruitment.text_3'),],
+            image: '/assets/recruitment.png',
+            reverse: true
         },
 
     ]
 
     return (
-        <>
+        <Box mb={60}>
             <Box style={imageHero}>
                 <Box display="flex" mt={10}>
                     <Grid container mt={15}>
@@ -80,8 +76,8 @@ export default function Services(props: IServicesProps) {
 
             </Box>
             <Box mt={0}>
-                {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text_1={card.text_1} text_2={card.text_2} text_3={card.text_3} image={card.image} />))}
+                {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
             </Box>
-        </>
+        </Box>
     );
 }

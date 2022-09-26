@@ -63,26 +63,26 @@
             "services_text_1": "La tecnología necesaria para adoptar la verdadera transformación digital.",
             "services_text_2": "Soluciones de TI especialmente diseñadas para ofrecer niveles de rendimiento, seguridad y fiabilidad excepcionalmente altos; con el mejor soporte técnico y a un precio competitivo."
         },
-        "cards":{
-            "implementation":{
+        "cards": {
+            "implementation": {
                 "title": "Implementación",
                 "text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo (CI/CD). Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
                 "text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
                 "text_3": "Preparamos y capacitamos consultores DevOps, contando con varios años de experiencia en el área."
             },
-            "advice":{
+            "advice": {
                 "title": "Asesoramiento en Ciberseguridad",
                 "text_1": "Los datos son el activo más valioso que las empresas poseen. Son la materia prima a partir de la cual pueden desarrollar proyectos y tomar decisiones. En vista de ese valor, es indispensable para las empresas darles los niveles de seguridad correspondientes.",
                 "text_2": "La seguridad de bases de datos se consigue mediante una serie de implementaciones, medidas y diagnósticos. El objetivo de todo eso es asegurarse de que ninguna amenaza, ya sea interna o externa, pueda alterar los datos con los que una empresa trabaja.",
                 "text_3": "Por ello, asesoramos a empresas en materia de seguridad , normas vigentes y capacitaciones."
             },
-            "outsourcing":{
+            "outsourcing": {
                 "title": "Outsourcing",
                 "text_1": "Somos tu equipo especialista en outsourcing tecnológico y de sistemas. ",
                 "text_2": "Nos encargamos de administrar la infraestructura IT de tu empresa, ayudándote a minimizar riesgos y reducir costos aportando experiencia y calidad en cada uno de los proyectos. De esta manera podrás externalizar tu departamento tecnológico o informático. ",
                 "text_3": "Abordamos tanto proyectos concretos como la gestión completa del área de sistemas."
             },
-            "recruitment":{
+            "recruitment": {
                 "title": "Recruitment",
                 "text_1": "Nuestros procesos de búsqueda de talento alcanzan el éxito gracias a nuestro enfoque en lograr la sinergia entre: las características de personalidad, competencias y valores de las personas con la cultura organizacional y preferencias de nuestros clientes. ",
                 "text_2": "Realizamos reclutamiento y contratación IT. ",
@@ -90,22 +90,25 @@
             }
         }
     },
-        "about_us": {
+    "about_us": {
         "main": {
             "about_us_title": "Quienes Somos",
             "about_us_text_1": "Apasionados por la tecnología y la mejora contínua.",
-            "about_us_text_2": "Dream & Do IT es un emprendimiento de consultorías en el área IT con más de 4 años de experiencia."
+            "about_us_text_2": "Dream & Do IT es un emprendimiento de consultorías en el área IT con más de 4 años de experiencia.",
+            "vision_title": "NUESTRA VISIÓN, MISIÓN & VALORES",
+            "vision_text_1": "Nuestro objetivo es cultivar el conocmiento, profesionalismo, eficiencia en potencial humano especializado en seguridad informática apostando al crecimiento y desarrollo de organizaciones en búsqueda del talento del futuro.",
+            "vision_text_2": "Ayudar a las compañías a adoptar tecnologías para aumentar la agilidad, reducir costos, maximizar su rendimiento y superar los desafíos de la nueva era digital."
         },
-        "cards":{
-            "vision":{
+        "cards": {
+            "vision": {
                 "title": "Visión",
                 "text": "Ser referentes en la formación y empleabilidad de talentos en desarrollo de operaciones en seguridad informática."
             },
-            "mision":{
+            "mision": {
                 "title": "Misión",
                 "text": "Formar y brindar recursos que aporten a las soluciones que requieren nuestros clientes."
             },
-            "values":{
+            "values": {
                 "title": "Valores",
                 "text": "La responsabilidad, la experiencia, el trabajo en equipo, la eficiencia y la mejora contínua."
             }

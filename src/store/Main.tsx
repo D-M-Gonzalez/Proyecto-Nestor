@@ -24,11 +24,11 @@ export default function Main(props: MainProps) {
             value: useMediaQuery(theme.breakpoints.only('sm')),
         },
         {
-            multiplier: 0.8,
+            multiplier: 0.9,
             value: useMediaQuery(theme.breakpoints.only('md')),
         },
         {
-            multiplier: 0.9,
+            multiplier: 1.05,
             value: useMediaQuery(theme.breakpoints.only('lg')),
         },
         {
