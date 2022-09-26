@@ -2,13 +2,13 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
-import ServiceHero from '../../assets/services-hero.png';
+import AboutUsHero from '../../assets/nosotros-dream-do-it.png';
 import AboutUsCard from '../../components/Cards/AboutUsCard';
 
 const imageHero = {
     width: "auto",
     height: "50vw",
-    backgroundImage: `url(${ServiceHero})`,
+    backgroundImage: `url(${AboutUsHero})`,
     backgroundSize: 'cover',
 }
 
