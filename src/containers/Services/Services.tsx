@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import ServiceCard from '../../components/Cards/ServiceCard';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
-import ServiceHero from '../../assets/services-hero.png';
+import ServiceHero from '../../assets/servicios-dream-do-it.png';
 
 const imageHero = {
     width: "auto",
