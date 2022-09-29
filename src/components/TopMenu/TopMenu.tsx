@@ -65,9 +65,9 @@ export const TopMenu = () => {
 
   return (
     <AppBar position='absolute' sx={{ backgroundColor: '#0A1128', height: '100px' }}>
-      <Box mt={1.5} sx={{ marginX: '5vw' }}>
+      <Box mt={{ xl: 1.8, lg: 2.3, md: 2.4, sm: 2.4, xs: 2.9 }} sx={{ marginX: { xl: 5, lg: 5, md: 3.5, sm: 5, xs: 2 } }}>
         <Toolbar disableGutters>
-          <Box component="img" sx={{ width: 300, display: { xs: 'none', md: 'flex' } }} src={logo} />
+          <Box component="img" sx={{ width: '20vw', maxWidth: '300px', display: { xs: 'none', md: 'flex' } }} src={logo} />
           <Typography
             variant="h6"
             noWrap
@@ -144,22 +144,22 @@ export const TopMenu = () => {
               <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, mx: 2, display: 'block', '&: focus': { color: '#fff' } }}
+                  sx={{ mx: 1, display: 'block', '&: focus': { color: '#fff' }, fontSize: '2vw' }}
                   variant={page.variant as keyof typeof Button}
                 >
-                  {page.title}
+                  <Typography fontSize={{ xl: 35, lg: 30, md: 18 }}>{page.title}</Typography>
                 </Button>
               </Link>
             ))}
           </Box>
           <Box>
             <Stack direction="row" alignItems="center">
-              <LanguageIcon sx={{ mr: 2, fontSize: 30 }} />
-              <Typography>ES</Typography>
+              <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 } }} />
+              <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
               <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
                 <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
               </Box>
-              <Typography>EN</Typography>
+              <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>EN</Typography>
             </Stack>
           </Box>
         </Toolbar>

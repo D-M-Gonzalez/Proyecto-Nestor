@@ -14,24 +14,24 @@ export default function ServiceCard(props: CardProps) {
 
   return (
     <>
-      <Box display="flex" m={10}>
+      <Box display="flex" mx={{ xl: 15, lg: 10, md: 8, sm: 6, xs: 2 }}>
         <Grid container mt={10} display="flex" flexDirection={reverse ? 'row-reverse' : 'row'}>
           <Box mt={5}>
             <Box
               component='img'
               src={image}
               borderRadius="20px"
-              width={{ md: 523, xs: 150 }}
+              width={{ xl: 523, lg: 450, md: 320, sm: 220, xs: 200 }}
             />
           </Box>
           <Grid item xs={0.5} />
           <Grid item container xs={6} alignContent='flex-start'>
-            <Typography fontFamily='IntegralCF' color='white' mt={10} fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+            <Typography fontFamily='IntegralCF' color='white' mt={{ xl: 5, lg: 6, md: 6, sm: 7, xs: 8 }} fontSize={{ xl: 60, lg: 40, md: 25, sm: 18, xs: 15 }} fontWeight={400} lineHeight={1.5}>
               {title}
             </Typography>
             {text.map((textArea) => {
               return (
-                <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 25, lg: 20, md: 14, sm: 8, xs: 6 }} fontWeight={400} lineHeight={1.2}>
                   {textArea}
                 </Typography>
               )

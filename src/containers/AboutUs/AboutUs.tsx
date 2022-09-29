@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
 import AboutUsHero from '../../assets/nosotros-dream-do-it.png';
-import AboutUsCard from '../../components/Cards/AboutUsCard';
+import HomeCard from '../../components/Cards/HomeCard';
 
 const imageHero = {
     width: "auto",
@@ -47,13 +47,13 @@ export default function AboutUs(props: IAboutUsProps) {
         <>
             <Box style={imageHero}>
                 <Box display="flex" mt={10}>
-                    <Grid container mt={15}>
+                    <Grid container mt={{ xl: 15, lg: 12, md: 9, sm: 5, xs: 4 }}>
                         <Grid item xs={0.5} />
                         <Grid item container xs={5}>
                             <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('about_us.main.about_us_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, md: 3, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('about_us.main.about_us_text_1')}
                             </Typography>
                             <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
@@ -87,7 +87,7 @@ export default function AboutUs(props: IAboutUsProps) {
                     {CardList.map((card) => {
                         return (
                             <Grid item container xs={2.8} key={card.id}>
-                                <AboutUsCard image={card.image} title={card.title} text={card.text} />
+                                <HomeCard image={card.image} title={card.title} text={card.text} />
                             </Grid>
                         )
                     })}

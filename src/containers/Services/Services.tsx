@@ -58,13 +58,13 @@ export default function Services(props: IServicesProps) {
         <Box mb={60}>
             <Box style={imageHero}>
                 <Box display="flex" mt={10}>
-                    <Grid container mt={15}>
+                    <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
                         <Grid item xs={0.5} />
                         <Grid item container xs={5}>
                             <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('services.main.services_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_1')}
                             </Typography>
                             <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
@@ -75,7 +75,7 @@ export default function Services(props: IServicesProps) {
                 </Box>
 
             </Box>
-            <Box mt={0}>
+            <Box >
                 {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
             </Box>
         </Box>

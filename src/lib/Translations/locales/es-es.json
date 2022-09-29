@@ -1,7 +1,7 @@
 {
     "menus": {
         "home": "Inicio",
-        "about_us": "Sobre Nosotros",
+        "about_us": "Nosotros",
         "services": "Servicios",
         "contact": "Contacto"
     },
