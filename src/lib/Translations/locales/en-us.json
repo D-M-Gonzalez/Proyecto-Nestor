@@ -113,5 +113,29 @@
                 "text": "La responsabilidad, la experiencia, el trabajo en equipo, la eficiencia y la mejora contínua."
             }
         }
+    },
+    "contact": {
+        "main": {
+            "main_title": "HAGAMOS ALGO GRANDE",
+            "main_text1": "La satisfacción de los clientes es nuestra prioridad.",
+            "main_text2": "Nuestro soporte está disponible constantemente para asistirte con cualquier pregunta que tengas sobre nuestro trabajo.",
+            "contact_title": "PONTE EN CONTACTO",
+            "contact_text1": "Para más información sobre nuestros servicios o coordinar una reunión, dejanos tus datos y un asesor se pondrá en contacto.",
+            "work_title": "¿QUERÉS TRABAJAR CON NOSOTROS?",
+            "work_text1": "Si estás buscando unirte a nuestra red de recursos, completá el siguiente formulario."
+        },
+        "form": {
+            "name": "Nombre",
+            "email": "E-mail",
+            "phone": "Teléfono",
+            "comments": "Comentarios",
+            "cv": "CV",
+            "linkedin": "Linkedin",
+            "portfolio": "Portafolio",
+            "cover": "Presentación (Opcional)"
+        },
+        "buttons": {
+            "send": "Enviar"
+        }
     }
 }

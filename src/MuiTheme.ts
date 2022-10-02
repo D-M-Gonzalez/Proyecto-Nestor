@@ -93,6 +93,20 @@ export const customTheme = createTheme({
                 }
             ]
         },
+        MuiTextField: {
+            variants: [
+                {
+                    props: { variant: 'filled' },
+                    style: {
+                        borderRadius: '10px',
+                        borderStyle: 'solid',
+                        borderWidth: '1.5px',
+                        borderColor: '#22B573',
+                        backgroundColor: 'rgb(255,255,255,0.15)'
+                    }
+                }
+            ]
+        },
         MuiMenuItem: {
             styleOverrides: {
                 root: {
