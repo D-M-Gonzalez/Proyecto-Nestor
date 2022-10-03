@@ -1,57 +1,65 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import Menu from '@mui/material/Menu';
+import { useMediaQuery, Typography, IconButton, Toolbar, Box, AppBar, MenuItem, Button, Switch, Stack, Drawer, useTheme } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import logo from '../../assets/logo-dream-do-it-dark.svg';
 import { useTranslation } from 'react-i18next';
-import Switch from '@mui/material/Switch';
-import Stack from '@mui/material/Stack';
 import LanguageIcon from '@mui/icons-material/Language';
+import HomeIcon from '../Icons/HomeIcon';
+import AboutUsIcon from '../Icons/ContactIcon';
+import ServicesIcon from '../Icons/ServicesIcon';
+import ContactIcon from '../Icons/AboutUsIcon';
 
 
 export interface ITopMenu { }
 
+const drawerItemStyles = {
+  color: '#22B573',
+  '&:focus': {
+    color: 'red',
+  }
+}
+
 export const TopMenu = () => {
 
-  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElNav, setAnchorElNav] = useState(false);
   const { t, i18n } = useTranslation();
+  const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.only('xs'))
 
   const pages = [
     {
       title: t('menus.home'),
       key: 'home',
       variant: 'contained',
-      url: '/'
+      url: '/',
+      icon: <HomeIcon sx={{ marginRight: '20px' }} />
     },
     {
       title: t('menus.about_us'),
       key: 'about_us',
       variant: 'contained',
-      url: 'about-us'
+      url: 'about-us',
+      icon: <AboutUsIcon sx={{ marginRight: '20px' }} />
     },
     {
       title: t('menus.services'),
       key: 'services',
       variant: 'contained',
-      url: 'services'
+      url: 'services',
+      icon: <ServicesIcon sx={{ marginRight: '20px' }} />
     },
     {
       title: t('menus.contact'),
       key: 'contact',
       variant: 'contained',
-      url: 'contact'
+      url: 'contact',
+      icon: <ContactIcon sx={{ marginRight: '20px' }} />
     }
   ];
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
+    setAnchorElNav(true);
   };
 
 
@@ -60,7 +68,7 @@ export const TopMenu = () => {
   }
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    setAnchorElNav(false);
   };
 
   return (
@@ -96,30 +104,34 @@ export const TopMenu = () => {
             >
               <MenuIcon />
             </IconButton>
-            <Menu
+            <Drawer
               id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
+              anchor='left'
+              open={anchorElNav}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
+              PaperProps={{ sx: { backgroundColor: '#0A1128' } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page.key} onClick={handleCloseNavMenu}>
-                  <Link to={page.url} style={{ textDecoration: "none", color: "#000" }}><Typography textAlign="center">{page.title}</Typography></Link>
-                </MenuItem>
-              ))}
-            </Menu>
+              <Box sx={{ width: '200px' }} mx={2} mt={5}>
+                <Box component="img" sx={{ width: '200px' }} src={logo} />
+                <Box mt={3}>
+                  {pages.map((page) => (
+                    <MenuItem key={page.key} onClick={handleCloseNavMenu}>
+                      <Link to={page.url} style={{ textDecoration: "none", color: "#000" }}><Typography textAlign="center" sx={{ ...drawerItemStyles }}>{page.icon}{page.title}</Typography></Link>
+                    </MenuItem>
+                  ))}
+                </Box>
+                <Box mt={3} ml={2}>
+                  <Stack direction="row" alignItems="center">
+                    <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30, xs: 30 }, color: '#22B573' }} />
+                    <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>ES</Typography>
+                    <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
+                      <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+                    </Box>
+                    <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>EN</Typography>
+                  </Stack>
+                </Box>
+              </Box>
+            </Drawer>
           </Box>
           <Box component="img" sx={{ width: 180, display: { xs: 'flex', md: 'none' } }} src={logo} />
           <Typography
@@ -152,16 +164,18 @@ export const TopMenu = () => {
               </Link>
             ))}
           </Box>
-          <Box>
-            <Stack direction="row" alignItems="center">
-              <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 } }} />
-              <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
-              <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
-                <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
-              </Box>
-              <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>EN</Typography>
-            </Stack>
-          </Box>
+          {!mobile && (
+            <Box>
+              <Stack direction="row" alignItems="center">
+                <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 } }} />
+                <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
+                <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
+                  <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+                </Box>
+                <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>EN</Typography>
+              </Stack>
+            </Box>
+          )}
         </Toolbar>
       </Box>
     </AppBar >
