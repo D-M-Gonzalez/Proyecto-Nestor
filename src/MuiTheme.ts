@@ -122,6 +122,34 @@ export const customTheme = createTheme({
                     backgroundColor: 'red'
                 }
             }
+        },
+        MuiSwitch: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: '#22B573',
+                    borderRadius: '20px',
+                    borderWidth: '5px',
+                    borderStyle: 'solid',
+                    borderColor: '#0A1128',
+                    display: 'flex'
+                },
+                colorPrimary: {
+                    paddingTop: '4px',
+                    paddingLeft: '4px',
+                    color: '#FFFFFF',
+                    '&.Mui-checked': {
+                        color: '#FFFFFF'
+                    }
+                },
+                track: {
+                    opacity: 0,
+                    backgroundColor: '#22B573',
+                    '.Mui-checked.Mui-checked + &': {
+                        opacity: 0,
+                        backgroundColor: '#22B573'
+                    }
+                }
+            }
         }
     }
 });

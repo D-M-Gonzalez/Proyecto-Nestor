@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { useMediaQuery, Typography, IconButton, Toolbar, Box, AppBar, MenuItem, Button, Switch, Stack, Drawer, useTheme } from '@mui/material';
+import { useMediaQuery, Typography, IconButton, Toolbar, Box, AppBar, MenuItem, Button, Switch, Stack, Drawer, useTheme, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/logo-dream-do-it-dark.svg';
 import { useTranslation } from 'react-i18next';
@@ -14,18 +14,23 @@ import ContactIcon from '../Icons/AboutUsIcon';
 export interface ITopMenu { }
 
 const drawerItemStyles = {
-  color: '#22B573',
+  transition: 'background-color 0.2s',
   '&:focus': {
-    color: 'red',
+    backgroundColor: '#22B573',
+  },
+  '&:hover': {
+    backgroundColor: '#22B573',
   }
 }
 
 export const TopMenu = () => {
 
   const [anchorElNav, setAnchorElNav] = useState(false);
+  const [visited, setVisited] = useState<string>('')
   const { t, i18n } = useTranslation();
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.only('xs'))
+  const tablet = useMediaQuery(theme.breakpoints.only('sm'))
 
   const pages = [
     {
@@ -33,28 +38,32 @@ export const TopMenu = () => {
       key: 'home',
       variant: 'contained',
       url: '/',
-      icon: <HomeIcon sx={{ marginRight: '20px' }} />
+      color: '#FFF',
+      icon: HomeIcon
     },
     {
       title: t('menus.about_us'),
       key: 'about_us',
       variant: 'contained',
       url: 'about-us',
-      icon: <AboutUsIcon sx={{ marginRight: '20px' }} />
+      color: '#FFF',
+      icon: AboutUsIcon
     },
     {
       title: t('menus.services'),
       key: 'services',
       variant: 'contained',
       url: 'services',
-      icon: <ServicesIcon sx={{ marginRight: '20px' }} />
+      color: '#FFF',
+      icon: ServicesIcon
     },
     {
       title: t('menus.contact'),
       key: 'contact',
       variant: 'contained',
       url: 'contact',
-      icon: <ContactIcon sx={{ marginRight: '20px' }} />
+      color: '#22B573',
+      icon: ContactIcon
     }
   ];
 
@@ -67,7 +76,8 @@ export const TopMenu = () => {
     i18n.changeLanguage(languaje)
   }
 
-  const handleCloseNavMenu = () => {
+  const handleCloseNavMenu = (url: string) => () => {
+    setVisited(url)
     setAnchorElNav(false);
   };
 
@@ -108,15 +118,24 @@ export const TopMenu = () => {
               id="menu-appbar"
               anchor='left'
               open={anchorElNav}
-              onClose={handleCloseNavMenu}
+              onClose={handleCloseNavMenu('')}
               PaperProps={{ sx: { backgroundColor: '#0A1128' } }}
             >
-              <Box sx={{ width: '200px' }} mx={2} mt={5}>
+              <Box sx={{ width: '200px' }} mt={5} mx={2}>
                 <Box component="img" sx={{ width: '200px' }} src={logo} />
                 <Box mt={3}>
                   {pages.map((page) => (
-                    <MenuItem key={page.key} onClick={handleCloseNavMenu}>
-                      <Link to={page.url} style={{ textDecoration: "none", color: "#000" }}><Typography textAlign="center" sx={{ ...drawerItemStyles }}>{page.icon}{page.title}</Typography></Link>
+                    <MenuItem key={page.key} onClick={handleCloseNavMenu(page.url)} sx={{ ...drawerItemStyles, backgroundColor: (visited === page.url ? '#22B573' : '#0A1128'), borderRadius: '10px' }}>
+                      <Link to={page.url} style={{ ...drawerItemStyles, textDecoration: "none", color: "#000", width: '100%' }}>
+                        <Grid container mt={0.5}>
+                          <Grid item container xs={3}>
+                            <Typography><page.icon sx={{ filter: (visited === page.url ? "invert(100%) sepia(100%) saturate(0%) hue-rotate(312deg) brightness(102%) contrast(102%)" : 'invert(59%) sepia(13%) saturate(2169%) hue-rotate(101deg) brightness(95%) contrast(89%)') }} /></Typography>
+                          </Grid>
+                          <Grid item container xs={9} justifyContent='flex-start'>
+                            <Typography mt={0.2} sx={{ color: (visited === page.url ? "#FFF" : '#22B573') }}>{page.title}</Typography>
+                          </Grid>
+                        </Grid>
+                      </Link>
                     </MenuItem>
                   ))}
                 </Box>
@@ -124,8 +143,12 @@ export const TopMenu = () => {
                   <Stack direction="row" alignItems="center">
                     <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30, xs: 30 }, color: '#22B573' }} />
                     <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>ES</Typography>
-                    <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
-                      <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+                    <Box>
+                      <Switch
+                        defaultChecked
+                        onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
+                        sx={{ mx: '5px' }}
+                      />
                     </Box>
                     <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>EN</Typography>
                   </Stack>
@@ -155,22 +178,26 @@ export const TopMenu = () => {
             {pages.map((page) => (
               <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
                 <Button
-                  onClick={handleCloseNavMenu}
-                  sx={{ mx: 1, display: 'block', '&: focus': { color: '#fff' }, fontSize: '2vw' }}
+                  onClick={handleCloseNavMenu(page.url)}
+                  sx={{ mx: 1, display: 'block', fontSize: '2vw', backgroundColor: (visited === page.url ? '#22B573' : '#0A1128') }}
                   variant={page.variant as keyof typeof Button}
                 >
-                  <Typography fontSize={{ xl: 35, lg: 30, md: 18 }}>{page.title}</Typography>
+                  <Typography fontSize={{ xl: 35, lg: 30, md: 16 }} sx={{ color: (visited === page.url ? '#FFF' : page.color) }}>{page.title}</Typography>
                 </Button>
               </Link>
             ))}
           </Box>
-          {!mobile && (
+          {!mobile && !tablet && (
             <Box>
               <Stack direction="row" alignItems="center">
                 <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 } }} />
                 <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
-                <Box sx={{ filter: 'invert(53%) sepia(94%) saturate(352%) hue-rotate(101deg) brightness(89%) contrast(92%)' }}>
-                  <Switch defaultChecked color='default' onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))} />
+                <Box>
+                  <Switch
+                    defaultChecked
+                    onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
+                    sx={{ mx: '5px' }}
+                  />
                 </Box>
                 <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>EN</Typography>
               </Stack>
