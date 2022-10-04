@@ -141,7 +141,7 @@ export const TopMenu = () => {
                 </Box>
                 <Box mt={3} ml={2}>
                   <Stack direction="row" alignItems="center">
-                    <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30, xs: 30 }, color: '#22B573' }} />
+                    <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30, xs: 30 }, color: '#FFF' }} />
                     <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>ES</Typography>
                     <Box>
                       <Switch
@@ -190,7 +190,7 @@ export const TopMenu = () => {
           {!mobile && !tablet && (
             <Box>
               <Stack direction="row" alignItems="center">
-                <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 } }} />
+                <LanguageIcon sx={{ mr: 2, fontSize: { xl: 40, lg: 35, md: 30 }, color: '#FFF' }} />
                 <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
                 <Box>
                   <Switch
