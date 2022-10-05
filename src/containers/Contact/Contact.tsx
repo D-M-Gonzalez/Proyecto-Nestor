@@ -73,7 +73,7 @@ export default function Services(props: IServicesProps) {
     }
 
     const handleSubmit = (type: string) => (event: React.MouseEvent) => {
-        type === 'contact' ? console.log(contactFormData) : console.log(workFormData)
+        type === 'contact' ? window.open("mailto:" + "emailTo" + '?cc=' + "emailCC" + '&subject=' + "emailSub" + '&body=' + "emailBody") : console.log(workFormData)
     }
 
     const contactFormInputs = [
