@@ -20,10 +20,10 @@ export default function HomeCard(props: CardProps) {
                 flexDirection='column'
                 alignItems="center"
             >
-                <Box mt={{ xl: 5, md: 3, sm: 2, xs: 2 }} component='img' src={image} sx={{ width: `${30 * ImgX}%` }} />
+                <Box mt={{ xl: 5, md: 3, sm: 3, xs: 3 }} component='img' src={image} sx={{ width: `${30 * ImgX}%` }} />
                 <Box mt={3} sx={{ width: '70%' }}>
-                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 30, lg: 22, md: 16, sm: 10, xs: 10 }} color='white'>{title}</Typography>
-                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 16, lg: 13, md: 10, sm: 5.5, xs: 4 }} color='white'>{text}</Typography>
+                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 30, lg: 22, md: 16, sm: 22, xs: 22 }} color='white'>{title}</Typography>
+                    <Typography fontFamily='Nunito Sans' fontSize={{ xl: 16, lg: 13, md: 10, sm: 13, xs: 13 }} color='white'>{text}</Typography>
                 </Box>
             </Box>
         </Paper>

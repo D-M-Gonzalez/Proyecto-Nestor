@@ -19,12 +19,12 @@ export default function Main(props: MainProps) {
     const theme = useTheme()
     const imageSize = [
         {
-            multiplier: 0.7,
+            multiplier: 1.05,
             value: useMediaQuery(theme.breakpoints.only('xs')),
             id: 'xs'
         },
         {
-            multiplier: 0.7,
+            multiplier: 1.05,
             value: useMediaQuery(theme.breakpoints.only('sm')),
             id: 'sm'
         },
