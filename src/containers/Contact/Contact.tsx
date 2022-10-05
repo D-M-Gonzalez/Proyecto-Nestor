@@ -256,7 +256,6 @@ export default function Services(props: IServicesProps) {
                             </Grid>
                         </Grid>
                     </Box>
-
                 </Box>
                 :
                 <Box>
