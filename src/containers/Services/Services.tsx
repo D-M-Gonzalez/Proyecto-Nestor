@@ -4,12 +4,14 @@ import ServiceCard from '../../components/Cards/ServiceCard';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
 import ServiceHero from '../../assets/servicios-dream-do-it.png';
+import { NONAME } from 'dns';
 
 const imageHero = {
     width: "auto",
     height: "50vw",
     backgroundImage: `url(${ServiceHero})`,
     backgroundSize: 'cover',
+
 }
 
 export interface IServicesProps { }
@@ -56,18 +58,18 @@ export default function Services(props: IServicesProps) {
 
     return (
         <Box mb={60}>
-            <Box style={imageHero}>
+            <Box style={imageHero} >
                 <Box display="flex" mt={10}>
-                    <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
+                    <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 30 }}>
                         <Grid item xs={0.5} />
-                        <Grid item container xs={5}>
-                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                        <Grid item container xs={10}>
+                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 25 }} fontWeight={400} lineHeight={1.5}>
                                 {t('services.main.services_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 22 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_1')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 22 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_2')}
                             </Typography>
                         </Grid>
@@ -75,7 +77,7 @@ export default function Services(props: IServicesProps) {
                 </Box>
 
             </Box>
-            <Box >
+            <Box mt={{ md: 6, sm: 5, xs: 50 }}>
                 {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
             </Box>
         </Box>
