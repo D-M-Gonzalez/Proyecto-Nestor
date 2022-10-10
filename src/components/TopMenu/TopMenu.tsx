@@ -42,7 +42,7 @@ export const TopMenu = () => {
       title: t('menus.home'),
       key: 'home',
       variant: 'contained',
-      url: '/',
+      url: '',
       color: '#FFF',
       icon: HomeIcon
     },
