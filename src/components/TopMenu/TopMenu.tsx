@@ -125,14 +125,14 @@ export const TopMenu = () => {
                 <Box component="img" sx={{ width: '200px' }} src={logo} />
                 <Box mt={3}>
                   {pages.map((page) => (
-                    <MenuItem key={page.key} onClick={handleCloseNavMenu(page.url)} sx={{ ...drawerItemStyles, backgroundColor: (visited === page.url ? '#22B573' : '#0A1128'), borderRadius: '10px' }}>
+                    <MenuItem key={page.key} onClick={handleCloseNavMenu(page.url)} sx={{ ...drawerItemStyles, backgroundColor: (visited === page.url ? '#22B573' : '#0A1128'), borderRadius: '10px', mt: '5px' }}>
                       <Link to={page.url} style={{ ...drawerItemStyles, textDecoration: "none", color: "#000", width: '100%' }}>
                         <Grid container mt={0.5}>
                           <Grid item container xs={3}>
-                            <Typography><page.icon sx={{ filter: (visited === page.url ? "invert(100%) sepia(100%) saturate(0%) hue-rotate(312deg) brightness(102%) contrast(102%)" : 'invert(59%) sepia(13%) saturate(2169%) hue-rotate(101deg) brightness(95%) contrast(89%)') }} /></Typography>
+                            <Typography sx={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(312deg) brightness(102%) contrast(102%)" }}><page.icon sx={{}} /></Typography>
                           </Grid>
                           <Grid item container xs={9} justifyContent='flex-start'>
-                            <Typography mt={0.2} sx={{ color: (visited === page.url ? "#FFF" : '#22B573') }}>{page.title}</Typography>
+                            <Typography mt={0.2} sx={{ filter: "invert(100%) sepia(100%) saturate(0%) hue-rotate(312deg) brightness(102%) contrast(102%)" }}>{page.title}</Typography>
                           </Grid>
                         </Grid>
                       </Link>

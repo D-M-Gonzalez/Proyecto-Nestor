@@ -2,14 +2,16 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Button, Grid, TextField, TextFieldProps, Typography } from '@mui/material';
-import ServiceHero from '../../assets/servicios-dream-do-it.png';
-import MobileImage from '../../assets/Contacto.png';
+import ContactHero from '../../assets/Contacto.png';
+import MobileImage from '../../assets/ContactoMobile.png';
 import { sendMail } from '../../controllers/mailController';
 
 const imageHero = {
-    width: "auto",
-    height: "50vw",
-    backgroundImage: `url(${ServiceHero})`,
+    width: "98.8vw",
+    height: "250vw",
+    maxHeight: '3500px',
+    minHeight: '2600px',
+    backgroundImage: `url(${ContactHero})`,
     backgroundSize: 'cover',
 }
 
@@ -129,7 +131,7 @@ export default function Services(props: IServicesProps) {
     ]
 
     return (
-        <Box mb={{ md: 300, sm: 50, xs: 50 }}>
+        <Box mb={{ md: 0, sm: 50, xs: 50 }}>
             {(screenSize === 'xs' || screenSize === 'sm') ?
                 <Box>
                     <Box style={imageMobile} mt={10} />
@@ -255,13 +257,18 @@ export default function Services(props: IServicesProps) {
                     </Box>
                 </Box>
                 :
-                <Box>
-                    <Box style={imageHero}>
-                        <Box display="flex" mt={10}>
+                <Box
+                    display="flex"
+                    mt={-5}
+                    flexDirection="column"
+                    alignItems="center"
+                >
+                    <div style={imageHero}>
+                        <Box display="flex" mt={12}>
                             <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
                                 <Grid item xs={0.5} />
                                 <Grid item container xs={5}>
-                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 45, lg: 40, md: 25 }} fontWeight={400} lineHeight={1.5}>
                                         {t('contact.main.main_title')}
                                     </Typography>
                                     <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
@@ -277,7 +284,7 @@ export default function Services(props: IServicesProps) {
                             <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
                                 <Grid item xs={0.5} />
                                 <Grid item container xs={5}>
-                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 50, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                         {t('contact.main.contact_title')}
                                     </Typography>
                                     <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
@@ -331,7 +338,7 @@ export default function Services(props: IServicesProps) {
                             <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
                                 <Grid item xs={0.5} />
                                 <Grid item container xs={5}>
-                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 50, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                         {t('contact.main.work_title')}
                                     </Typography>
                                     <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
@@ -400,7 +407,7 @@ export default function Services(props: IServicesProps) {
                                 </Grid>
                             </Grid>
                         </Box>
-                    </Box>
+                    </div>
                 </Box>
             }
         </Box>

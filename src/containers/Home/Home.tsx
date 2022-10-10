@@ -9,7 +9,8 @@ import { useImageMultiplier } from '../../store/Main';
 
 const background = {
     width: "98.8vw",
-    height: "250vw",
+    height: "230vw",
+    minHeight: '2300px',
     backgroundImage: `url(${HomeImage})`,
     backgroundSize: 'cover',
 }
@@ -58,7 +59,7 @@ export default function Home(props: IHomeProps) {
 
 
     return (
-        <Box mb={{ md: 50, sm: 50, xs: 50 }}>
+        <Box mb={{ md: 0, sm: 50, xs: 50 }}>
             {(screenSize === 'xs' || screenSize === 'sm') ?
                 <Box>
                     <Box>
@@ -76,7 +77,7 @@ export default function Home(props: IHomeProps) {
                                     </Typography>
                                 </Grid>
                                 <Grid item container xs={12} mt={{ xl: 5, md: 4, sm: 5, xs: 5 }} justifyContent='center'>
-                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '250px', fontSize: '20px' }}>
+                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '300px', fontSize: '18px' }}>
                                         {t('home.buttons.ask_about_services')}
                                     </Button>
                                 </Grid>
@@ -134,11 +135,11 @@ export default function Home(props: IHomeProps) {
                         flexDirection="column"
                         alignItems="center">
                         <div style={background}>
-                            <Box display="flex" mt={10}>
+                            <Box display="flex" mt={{ xl: 14, lg: 12, md: 10 }}>
                                 <Grid container mt={10}>
                                     <Grid item xs={0.5} />
                                     <Grid item container xs={5}>
-                                        <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 65, lg: 40, md: 25, sm: 16, xs: 11 }} fontWeight={400} lineHeight={1.5}>
+                                        <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 60, lg: 40, md: 25, sm: 16, xs: 11 }} fontWeight={400} lineHeight={1.5}>
                                             {t('home.main.migration_title')}
                                         </Typography>
                                         <Typography fontFamily='Nunito Sans' color='white' mt={{ xl: 5, md: 4, sm: 2 }} fontSize={{ xl: 25, lg: 18, md: 14, sm: 8, xs: 5 }} fontWeight={400} lineHeight={1.2}>
@@ -154,11 +155,11 @@ export default function Home(props: IHomeProps) {
                                     </Grid>
                                 </Grid>
                             </Box>
-                            <Box display="flex" mt={{ xl: 20, lg: 15, md: 10, sm: 5, xs: 1 }}>
+                            <Box display="flex" mt={{ xl: 18, lg: 15, md: 10, sm: 5, xs: 1 }}>
                                 <Grid container mt={{ xl: 35, lg: 25, md: 20, sm: 15, xs: 10 }}>
                                     <Grid item xs={0.5} />
                                     <Grid item container xs={6}>
-                                        <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 65, lg: 40, md: 25, sm: 16, xs: 11 }} fontWeight={400} lineHeight={1.5}>
+                                        <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 60, lg: 40, md: 25, sm: 16, xs: 11 }} fontWeight={400} lineHeight={1.5}>
                                             {t('home.main.implementation_title')}
                                         </Typography>
                                         <Typography fontFamily='Nunito Sans' color='white' mt={{ xl: 5, md: 4, sm: 2 }} fontSize={{ xl: 25, lg: 18, md: 14, sm: 8, xs: 5 }} fontWeight={400} lineHeight={1.2}>

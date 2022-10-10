@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
-import AboutUsHero from '../../assets/nosotros-dream-do-it.png';
+import AboutUsHero from '../../assets/Nosotros.png';
 import HomeCard from '../../components/Cards/HomeCard';
-import MobileImage from '../../assets/Nosotros.png';
+import MobileImage from '../../assets/NosotrosMobile.png';
 
 const imageHero = {
-    width: "auto",
-    height: "50vw",
+    width: "98.8vw",
+    height: "180vw",
+    minHeight: '1800px',
     backgroundImage: `url(${AboutUsHero})`,
     backgroundSize: 'cover',
 }
@@ -49,7 +50,7 @@ export default function AboutUs(props: IAboutUsProps) {
     ]
 
     return (
-        <Box mb={{ md: 50, sm: 50, xs: 50 }}>
+        <Box mb={{ md: 0, sm: 50, xs: 50 }}>
             {(screenSize === 'xs' || screenSize === 'sm') ?
                 <Box>
                     <Box style={imageMobile} mt={10} />
@@ -106,8 +107,13 @@ export default function AboutUs(props: IAboutUsProps) {
                     </Box>
                 </Box>
                 :
-                <Box>
-                    <Box style={imageHero}>
+                <Box
+                    display="flex"
+                    mt={-5}
+                    flexDirection="column"
+                    alignItems="center"
+                >
+                    <div style={imageHero}>
                         <Box display="flex" mt={10}>
                             <Grid container mt={{ xl: 15, lg: 12, md: 9, sm: 5, xs: 4 }}>
                                 <Grid item xs={0.5} />
@@ -124,37 +130,37 @@ export default function AboutUs(props: IAboutUsProps) {
                                 </Grid>
                             </Grid>
                         </Box>
-                    </Box>
-                    <Box display="flex">
-                        <Grid container>
-                            <Grid item xs={0.5} />
-                            <Grid item container xs={6}>
-                                <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
-                                    {t('about_us.main.vision_title')}
-                                </Typography>
-                                <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
-                                    {t('about_us.main.vision_text_1')}
-                                </Typography>
-                                <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
-                                    {t('about_us.main.vision_text_2')}
-                                </Typography>
+                        <Box display="flex" mt={{ xl: 45, lg: 40, md: 40 }}>
+                            <Grid container>
+                                <Grid item xs={0.5} />
+                                <Grid item container xs={6}>
+                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                                        {t('about_us.main.vision_title')}
+                                    </Typography>
+                                    <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                                        {t('about_us.main.vision_text_1')}
+                                    </Typography>
+                                    <Typography fontFamily='Nunito Sans' color='white' mt={5} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                                        {t('about_us.main.vision_text_2')}
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs={5.5} />
                             </Grid>
-                            <Grid item xs={5.5} />
-                        </Grid>
-                    </Box>
-                    <Box display="flex" mt={10} mb={60}>
-                        <Grid container mt={20}>
-                            <Grid item xs />
-                            {CardList.map((card) => {
-                                return (
-                                    <Grid item container xs={2.8} key={card.id}>
-                                        <HomeCard image={card.image} title={card.title} text={card.text} />
-                                    </Grid>
-                                )
-                            })}
-                            <Grid item xs />
-                        </Grid>
-                    </Box>
+                        </Box>
+                        <Box display="flex" mt={10} mb={60}>
+                            <Grid container mt={20}>
+                                <Grid item xs />
+                                {CardList.map((card) => {
+                                    return (
+                                        <Grid item container xs={2.8} key={card.id}>
+                                            <HomeCard image={card.image} title={card.title} text={card.text} />
+                                        </Grid>
+                                    )
+                                })}
+                                <Grid item xs />
+                            </Grid>
+                        </Box>
+                    </div>
                 </Box>
             }
         </Box>
