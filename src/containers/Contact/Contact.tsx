@@ -4,6 +4,7 @@ import { useImageMultiplier } from '../../store/Main';
 import { Box, Button, Grid, TextField, TextFieldProps, Typography } from '@mui/material';
 import ServiceHero from '../../assets/servicios-dream-do-it.png';
 import MobileImage from '../../assets/Contacto.png';
+import { sendMail } from '../../controllers/mailController';
 
 const imageHero = {
     width: "auto",
@@ -73,7 +74,7 @@ export default function Services(props: IServicesProps) {
     }
 
     const handleSubmit = (type: string) => (event: React.MouseEvent) => {
-        type === 'contact' ? window.open("mailto:" + "emailTo" + '?cc=' + "emailCC" + '&subject=' + "emailSub" + '&body=' + "emailBody") : console.log(workFormData)
+        type === 'contact' ? sendMail(contactFormData, 'contact') : sendMail(workFormData, 'work')
     }
 
     const contactFormInputs = [
@@ -108,10 +109,6 @@ export default function Services(props: IServicesProps) {
         {
             id: 'phone',
             label: t('contact.form.phone')
-        },
-        {
-            id: 'cv',
-            label: t('contact.form.cv')
         },
     ]
 

@@ -10,132 +10,132 @@
     },
     "home": {
         "main": {
-            "migration_title": "MIGRACIÓN A INFRAESTRUCTURA CLOUD",
-            "migration_text": "Te acompañamos en el camino de la transformación digital. Bajo la cultura DevOps, creamos CI/CD para acelerar los tiempos de operaciones, y realizamos automatización de infraestructura Cloud, sosteniendo los principios de segurar en la nube",
-            "implementation_title": "IMPLEMENTACIÓN DE CI/CD",
-            "implementation_text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo. Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
-            "implementation_text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
-            "implementation_text_3": "Migrar a la nube les permite a las empresas contar con los recursos en tiempo y forma para el negocio a un menor costo. Además nos ocupamos de todo, liberando mucho tiempo a las compañías para que puedan ocuparse de lo realmente importante: los negocios.",
-            "ready_title": "¿ESTÁS LISTO PARA MODERNIZARTE?"
+            "migration_title": "CLOUD MIGRATION",
+            "migration_text": "We are pleased to accompany in your digital transformation. Under DevOps culture, we create Continuous Integration/Continuous Deployment to accelerate system operations and we achieve the automation of your cloud architecture manteining all the security principles.",
+            "implementation_title": "CI/CD IMPLEMENTATION",
+            "implementation_text_1": "We help your IT team to transform and modernize the traditional processes of development, applying Continuous Integration/Continuous Deployment. Bringing cloud architecture solutions AWS, GCP, AZURE.",
+            "implementation_text_2": "We bring ideas and cloud solutions that will allow your business respond to most exacting demands by using infrastructure as code and adaptable to the needs and to your budget.",
+            "implementation_text_3": "Cloud migration allows companies have the resources in a timely manner for the business at a lower cost. In addition, we take care of everything, freeing up a lot of time for companies so that they can take care of what is really important: business.",
+            "ready_title": "¿ARE YOU READY TO UPGRADE?"
         },
         "buttons": {
-            "ask_about_services": "ASK ABOUT SERVICES",
+            "ask_about_services": "ABOUT SERVICES",
             "begin": "LET'S BEGIN"
         },
         "cards": {
             "meeting": {
-                "title": "Meeting",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "title": "Survey",
+                "text": "Counseling and assistance from experts in what needs to be automated yo achieve your business goals and how to implement the best solution."
             },
             "search": {
-                "title": "Search",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "title": "Strategy",
+                "text": "From the selected solution, we diagram, scope is set, times are agreed for deliverables during the process."
             },
             "interviews": {
-                "title": "Interviews",
-                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                "title": "Implementation",
+                "text": "Solutions development, based on agreed times. Set up meetings with the technicians that are involved. "
             },
             "hiring": {
-                "title": "Hiring",
+                "title": "Training",
                 "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             },
             "survey": {
                 "title": "Survey",
-                "text": "Asesoramiento y asistencia de expertos en lo que necesita ser automatizado para lograr los objetivos del negocio y cómo implementar la mejor solución."
+                "text": "Counseling and assistance from experts in what needs to be automated yo achieve your business goals and how to implement the best solution."
             },
             "strategy": {
                 "title": "Strategy",
-                "text": "A partir de la solución elegida, se diagrama, se establece el alcance, se pactan tiempos y entregables en lo que dura el proceso."
+                "text": "From the selected solution, we diagram, scope is set, times are agreed for deliverables during the process."
             },
             "implementation": {
                 "title": "Implementation",
-                "text": "Desarrollo de soluciones, en base a tiempos y entregables pactados, estableciendo reuniones con los equipos técnicos involucrados."
+                "text": "Solutions development, based on agreed times. Set up meetings with the technicians that are involved. "
             },
             "training": {
                 "title": "Training",
-                "text": "Transmición del conocimiento sobre la infraestructura desarrollada para que los equipos técnicos tomen el mando de los mismos."
+                "text": "Knowledge transmition about the developed infrastructure so technician teams can take the command. "
             }
         }
     },
     "services": {
         "main": {
-            "services_title": "Servicios",
-            "services_text_1": "La tecnología necesaria para adoptar la verdadera transformación digital.",
-            "services_text_2": "Soluciones de TI especialmente diseñadas para ofrecer niveles de rendimiento, seguridad y fiabilidad excepcionalmente altos; con el mejor soporte técnico y a un precio competitivo."
+            "services_title": "SERVICES",
+            "services_text_1": "The technology needed to embrace true digital transformation.",
+            "services_text_2": "IT solutions specially designed to offer high levels of performance, security and reliability; with the best technical support and a competitive price."
         },
         "cards": {
             "implementation": {
-                "title": "Implementación",
-                "text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo (CI/CD). Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
-                "text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
-                "text_3": "Preparamos y capacitamos consultores DevOps, contando con varios años de experiencia en el área."
+                "title": "CLOUD INFRASTRUCTURE AUTOMATION",
+                "text_1": "We help your IT team modernize traditional development processes, applying Continuous Integration and Continuous Delivery (CI/CD). Providing cloud infrastructure solutions AWS, GCP, AZURE.",
+                "text_2": "We bring ideas and cloud solutions that allow your business to respond to the most exacting demands using infrastructure as code and adaptable to the need and budget.",
+                "text_3": "We prepare and train DevOps consultants, with several years of experience in the area."
             },
             "advice": {
-                "title": "Asesoramiento en Ciberseguridad",
-                "text_1": "Los datos son el activo más valioso que las empresas poseen. Son la materia prima a partir de la cual pueden desarrollar proyectos y tomar decisiones. En vista de ese valor, es indispensable para las empresas darles los niveles de seguridad correspondientes.",
-                "text_2": "La seguridad de bases de datos se consigue mediante una serie de implementaciones, medidas y diagnósticos. El objetivo de todo eso es asegurarse de que ninguna amenaza, ya sea interna o externa, pueda alterar los datos con los que una empresa trabaja.",
-                "text_3": "Por ello, asesoramos a empresas en materia de seguridad , normas vigentes y capacitaciones."
+                "title": "CIBERSECURITY COUNSELING",
+                "text_1": "Data is the most valuable asset that companies possess. They are the material from which they can develop projects and make decisions. In view of this value, it is essential for companies to give them the corresponding levels of security.",
+                "text_2": "Database security is achieved through series of implementations, measurements, and diagnostics. The point of all of this is to make sure that no threat, whether internal or external, can tamper with the data a company works with.",
+                "text_3": "Therefore, we advise companies on safety, current regulations and training."
             },
             "outsourcing": {
-                "title": "Outsourcing",
-                "text_1": "Somos tu equipo especialista en outsourcing tecnológico y de sistemas. ",
-                "text_2": "Nos encargamos de administrar la infraestructura IT de tu empresa, ayudándote a minimizar riesgos y reducir costos aportando experiencia y calidad en cada uno de los proyectos. De esta manera podrás externalizar tu departamento tecnológico o informático. ",
-                "text_3": "Abordamos tanto proyectos concretos como la gestión completa del área de sistemas."
+                "title": "OUTSOURCING",
+                "text_1": "We are your specialist team in technology and systems outsourcing.",
+                "text_2": "We take care of managing your company's IT infrastructure, helping you minimize risks and reduce costs by providing experience and quality in each  project. In this way you can outsource your technology or IT department.",
+                "text_3": "We focus on specific projects and complete management of the systems area."
             },
             "recruitment": {
-                "title": "Recruitment",
-                "text_1": "Nuestros procesos de búsqueda de talento alcanzan el éxito gracias a nuestro enfoque en lograr la sinergia entre: las características de personalidad, competencias y valores de las personas con la cultura organizacional y preferencias de nuestros clientes. ",
-                "text_2": "Realizamos reclutamiento y contratación IT. ",
-                "text_3": "En base a las características requeridas por nuestros clientes, evaluamos y perfilamos a los candidatos que cumplan con los requisitos demandados para el puesto y así se adapten 100% a tu empresa."
+                "title": "RECRUITMENT",
+                "text_1": "Our talent adquisition process succeed thanks to our focus on achieving synergy between the personality characteristics, skills and values ​​of people with the organizational culture and preferences of our clients.",
+                "text_2": "We carry out IT recruitment and hiring. Based on the requirements of our customers, we evaluate and profile the candidates who achieve those requirements demanded for the position and thus adapt 100% to your company.",
+                "text_3": ""
             }
         }
     },
     "about_us": {
         "main": {
-            "about_us_title": "Quienes Somos",
-            "about_us_text_1": "Apasionados por la tecnología y la mejora contínua.",
-            "about_us_text_2": "Dream & Do IT es un emprendimiento de consultorías en el área IT con más de 4 años de experiencia.",
-            "vision_title": "NUESTRA VISIÓN, MISIÓN & VALORES",
-            "vision_text_1": "Nuestro objetivo es cultivar el conocmiento, profesionalismo, eficiencia en potencial humano especializado en seguridad informática apostando al crecimiento y desarrollo de organizaciones en búsqueda del talento del futuro.",
-            "vision_text_2": "Ayudar a las compañías a adoptar tecnologías para aumentar la agilidad, reducir costos, maximizar su rendimiento y superar los desafíos de la nueva era digital."
+            "about_us_title": "WHO WE ARE",
+            "about_us_text_1": "Passionate about technology and continuous improvement.",
+            "about_us_text_2": "Dream & Do IT is a consulting company in the IT area with more than 4 years of experience.",
+            "vision_title": "OUR VISION, MISION & VALUES",
+            "vision_text_1": "Our objective is to cultivate knowledge, professionalism, efficiency in human potential specialized in computer security, betting on the growth and development of organizations in the search of the talent of the future.",
+            "vision_text_2": "Helping companies adopt technologies to increase agility, reduce costs, maximize performance and meet the challenges of the new digital age."
         },
         "cards": {
             "vision": {
                 "title": "Visión",
-                "text": "Ser referentes en la formación y empleabilidad de talentos en desarrollo de operaciones en seguridad informática."
+                "text": "To be relevant in the training and employability of talent in the development of computer security operations."
             },
             "mision": {
-                "title": "Misión",
-                "text": "Formar y brindar recursos que aporten a las soluciones que requieren nuestros clientes."
+                "title": "Mision",
+                "text": "We are here to train and provide resources that contribute to the solutions that our clients require."
             },
             "values": {
-                "title": "Valores",
-                "text": "La responsabilidad, la experiencia, el trabajo en equipo, la eficiencia y la mejora contínua."
+                "title": "Values",
+                "text": "Responsibility, experience, teamwork, efficiency, continuous improvement, and commitment above all else."
             }
         }
     },
     "contact": {
         "main": {
-            "main_title": "HAGAMOS ALGO GRANDE",
-            "main_text1": "La satisfacción de los clientes es nuestra prioridad.",
-            "main_text2": "Nuestro soporte está disponible constantemente para asistirte con cualquier pregunta que tengas sobre nuestro trabajo.",
-            "contact_title": "PONTE EN CONTACTO",
-            "contact_text1": "Para más información sobre nuestros servicios o coordinar una reunión, dejanos tus datos y un asesor se pondrá en contacto.",
-            "work_title": "¿QUERÉS TRABAJAR CON NOSOTROS?",
-            "work_text1": "Si estás buscando unirte a nuestra red de recursos, completá el siguiente formulario."
+            "main_title": "LET'S DO SOMETHING AWESOME",
+            "main_text1": "Customer satisfaction is our priority.",
+            "main_text2": "Our support is constantly available to assist you with any questions you have about our work.",
+            "contact_title": "GET IN TOUCH",
+            "contact_text1": "For more information about our services or to set a meeting, leave us your data and an advisor will contact you.",
+            "work_title": "DO YOU WANT TO WORK WITH US?",
+            "work_text1": "If you are looking to join our resource network, please complete the form below."
         },
         "form": {
-            "name": "Nombre",
+            "name": "Name",
             "email": "E-mail",
-            "phone": "Teléfono",
-            "comments": "Comentarios",
+            "phone": "Phone",
+            "comments": "Comments",
             "cv": "CV",
             "linkedin": "Linkedin",
-            "portfolio": "Portafolio",
-            "cover": "Presentación (Opcional)"
+            "portfolio": "Portfolio",
+            "cover": "Presentation (Optional)"
         },
         "buttons": {
-            "send": "Enviar"
+            "send": "Send"
         }
     }
 }
