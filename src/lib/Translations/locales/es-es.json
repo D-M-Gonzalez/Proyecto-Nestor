@@ -1,0 +1,144 @@
+{
+    "menus": {
+        "home": "Inicio",
+        "about_us": "Nosotros",
+        "services": "Servicios",
+        "contact": "Contacto"
+    },
+    "footer": {
+        "menu": "Menu"
+    },
+    "home": {
+        "main": {
+            "migration_title": "MIGRACIÓN A INFRAESTRUCTURA CLOUD",
+            "migration_text": "Te acompañamos en el camino de la transformación digital. Bajo la cultura DevOps, creamos CI/CD para acelerar los tiempos de operaciones, y realizamos automatización de infraestructura Cloud, sosteniendo los principios de segurar en la nube",
+            "implementation_title": "IMPLEMENTACIÓN DE CI/CD",
+            "implementation_text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo. Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
+            "implementation_text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
+            "implementation_text_3": "Migrar a la nube les permite a las empresas contar con los recursos en tiempo y forma para el negocio a un menor costo. Además nos ocupamos de todo, liberando mucho tiempo a las compañías para que puedan ocuparse de lo realmente importante: los negocios.",
+            "ready_title": "¿ESTÁS LISTO PARA MODERNIZARTE?"
+        },
+        "buttons": {
+            "ask_about_services": "CONSULTAR SERVICIOS",
+            "begin": "COMENZAR"
+        },
+        "cards": {
+            "meeting": {
+                "title": "Encuentros",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "search": {
+                "title": "Búsquedas",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "interviews": {
+                "title": "Entrevistas",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "hiring": {
+                "title": "Presentación",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "survey": {
+                "title": "Relevamiento",
+                "text": "Asesoramiento y asistencia de expertos en lo que necesita ser automatizado para lograr los objetivos del negocio y cómo implementar la mejor solución."
+            },
+            "strategy": {
+                "title": "Estrategia",
+                "text": "A partir de la solución elegida, se diagrama, se establece el alcance, se pactan tiempos y entregables en lo que dura el proceso."
+            },
+            "implementation": {
+                "title": "Implementación",
+                "text": "Desarrollo de soluciones, en base a tiempos y entregables pactados, estableciendo reuniones con los equipos técnicos involucrados."
+            },
+            "training": {
+                "title": "Capacitación",
+                "text": "Transmición del conocimiento sobre la infraestructura desarrollada para que los equipos técnicos tomen el mando de los mismos."
+            }
+        }
+    },
+    "services": {
+        "main": {
+            "services_title": "Servicios",
+            "services_text_1": "La tecnología necesaria para adoptar la verdadera transformación digital.",
+            "services_text_2": "Soluciones de TI especialmente diseñadas para ofrecer niveles de rendimiento, seguridad y fiabilidad excepcionalmente altos; con el mejor soporte técnico y a un precio competitivo."
+        },
+        "cards": {
+            "implementation": {
+                "title": "Implementación",
+                "text_1": "Ayudamos a tu equipo IT a modernizar los procesos tradicionales de desarrollo, aplicando Integración Contínua y Delivery Contínuo (CI/CD). Brindando soluciones de infraestructura cloud AWS, GCP, AZURE.",
+                "text_2": "Aportamos ideas y soluciones cloud que le permitan a tu negocio responder a las demandas más exigentes utilizando infraestructura como código y adaptable a la necesidad y a tu presupuesto.",
+                "text_3": "Preparamos y capacitamos consultores DevOps, contando con varios años de experiencia en el área."
+            },
+            "advice": {
+                "title": "Asesoramiento en Ciberseguridad",
+                "text_1": "Los datos son el activo más valioso que las empresas poseen. Son la materia prima a partir de la cual pueden desarrollar proyectos y tomar decisiones. En vista de ese valor, es indispensable para las empresas darles los niveles de seguridad correspondientes.",
+                "text_2": "La seguridad de bases de datos se consigue mediante una serie de implementaciones, medidas y diagnósticos. El objetivo de todo eso es asegurarse de que ninguna amenaza, ya sea interna o externa, pueda alterar los datos con los que una empresa trabaja.",
+                "text_3": "Por ello, asesoramos a empresas en materia de seguridad , normas vigentes y capacitaciones."
+            },
+            "outsourcing": {
+                "title": "Outsourcing",
+                "text_1": "Somos tu equipo especialista en outsourcing tecnológico y de sistemas. ",
+                "text_2": "Nos encargamos de administrar la infraestructura IT de tu empresa, ayudándote a minimizar riesgos y reducir costos aportando experiencia y calidad en cada uno de los proyectos. De esta manera podrás externalizar tu departamento tecnológico o informático. ",
+                "text_3": "Abordamos tanto proyectos concretos como la gestión completa del área de sistemas."
+            },
+            "recruitment": {
+                "title": "Recruitment",
+                "text_1": "Nuestros procesos de búsqueda de talento alcanzan el éxito gracias a nuestro enfoque en lograr la sinergia entre: las características de personalidad, competencias y valores de las personas con la cultura organizacional y preferencias de nuestros clientes. ",
+                "text_2": "Realizamos reclutamiento y contratación IT. ",
+                "text_3": "En base a las características requeridas por nuestros clientes, evaluamos y perfilamos a los candidatos que cumplan con los requisitos demandados para el puesto y así se adapten 100% a tu empresa."
+            }
+        },
+        "buttons": {
+            "view": "READ MORE"
+        }
+    },
+    "about_us": {
+        "main": {
+            "about_us_title": "Quienes Somos",
+            "about_us_text_1": "Apasionados por la tecnología y la mejora contínua.",
+            "about_us_text_2": "Dream & Do IT es un emprendimiento de consultorías en el área IT con más de 4 años de experiencia.",
+            "vision_title": "NUESTRA VISIÓN, MISIÓN & VALORES",
+            "vision_text_1": "Nuestro objetivo es cultivar el conocmiento, profesionalismo, eficiencia en potencial humano especializado en seguridad informática apostando al crecimiento y desarrollo de organizaciones en búsqueda del talento del futuro.",
+            "vision_text_2": "Ayudar a las compañías a adoptar tecnologías para aumentar la agilidad, reducir costos, maximizar su rendimiento y superar los desafíos de la nueva era digital."
+        },
+        "cards": {
+            "vision": {
+                "title": "Visión",
+                "text": "Ser referentes en la formación y empleabilidad de talentos en desarrollo de operaciones en seguridad informática."
+            },
+            "mision": {
+                "title": "Misión",
+                "text": "Formar y brindar recursos que aporten a las soluciones que requieren nuestros clientes."
+            },
+            "values": {
+                "title": "Valores",
+                "text": "La responsabilidad, la experiencia, el trabajo en equipo, la eficiencia y la mejora contínua."
+            }
+        }
+    },
+    "contact": {
+        "main": {
+            "main_title": "HAGAMOS ALGO GRANDE",
+            "main_text1": "La satisfacción de los clientes es nuestra prioridad.",
+            "main_text2": "Nuestro soporte está disponible constantemente para asistirte con cualquier pregunta que tengas sobre nuestro trabajo.",
+            "contact_title": "PONTE EN CONTACTO",
+            "contact_text1": "Para más información sobre nuestros servicios o coordinar una reunión, dejanos tus datos y un asesor se pondrá en contacto.",
+            "work_title": "¿QUERÉS TRABAJAR CON NOSOTROS?",
+            "work_text1": "Si estás buscando unirte a nuestra red de recursos, completá el siguiente formulario."
+        },
+        "form": {
+            "name": "Nombre",
+            "email": "E-mail",
+            "phone": "Teléfono",
+            "comments": "Comentarios",
+            "cv": "CV",
+            "linkedin": "Linkedin",
+            "portfolio": "Portafolio",
+            "cover": "Presentación (Opcional)"
+        },
+        "buttons": {
+            "send": "Enviar"
+        }
+    }
+}

@@ -1,0 +1,144 @@
+{
+    "menus": {
+        "home": "Home",
+        "about_us": "About Us",
+        "services": "Services",
+        "contact": "Contact"
+    },
+    "footer": {
+        "menu": "Menu"
+    },
+    "home": {
+        "main": {
+            "migration_title": "CLOUD MIGRATION",
+            "migration_text": "We are pleased to accompany in your digital transformation. Under DevOps culture, we create Continuous Integration/Continuous Deployment to accelerate system operations and we achieve the automation of your cloud architecture manteining all the security principles.",
+            "implementation_title": "CI/CD IMPLEMENTATION",
+            "implementation_text_1": "We help your IT team to transform and modernize the traditional processes of development, applying Continuous Integration/Continuous Deployment. Bringing cloud architecture solutions AWS, GCP, AZURE.",
+            "implementation_text_2": "We bring ideas and cloud solutions that will allow your business respond to most exacting demands by using infrastructure as code and adaptable to the needs and to your budget.",
+            "implementation_text_3": "Cloud migration allows companies have the resources in a timely manner for the business at a lower cost. In addition, we take care of everything, freeing up a lot of time for companies so that they can take care of what is really important: business.",
+            "ready_title": "¿ARE YOU READY TO UPGRADE?"
+        },
+        "buttons": {
+            "ask_about_services": "ABOUT SERVICES",
+            "begin": "LET'S BEGIN"
+        },
+        "cards": {
+            "meeting": {
+                "title": "Survey",
+                "text": "Counseling and assistance from experts in what needs to be automated yo achieve your business goals and how to implement the best solution."
+            },
+            "search": {
+                "title": "Strategy",
+                "text": "From the selected solution, we diagram, scope is set, times are agreed for deliverables during the process."
+            },
+            "interviews": {
+                "title": "Implementation",
+                "text": "Solutions development, based on agreed times. Set up meetings with the technicians that are involved. "
+            },
+            "hiring": {
+                "title": "Training",
+                "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            },
+            "survey": {
+                "title": "Survey",
+                "text": "Counseling and assistance from experts in what needs to be automated yo achieve your business goals and how to implement the best solution."
+            },
+            "strategy": {
+                "title": "Strategy",
+                "text": "From the selected solution, we diagram, scope is set, times are agreed for deliverables during the process."
+            },
+            "implementation": {
+                "title": "Implementation",
+                "text": "Solutions development, based on agreed times. Set up meetings with the technicians that are involved. "
+            },
+            "training": {
+                "title": "Training",
+                "text": "Knowledge transmition about the developed infrastructure so technician teams can take the command. "
+            }
+        }
+    },
+    "services": {
+        "main": {
+            "services_title": "SERVICES",
+            "services_text_1": "The technology needed to embrace true digital transformation.",
+            "services_text_2": "IT solutions specially designed to offer high levels of performance, security and reliability; with the best technical support and a competitive price."
+        },
+        "cards": {
+            "implementation": {
+                "title": "CLOUD INFRASTRUCTURE AUTOMATION",
+                "text_1": "We help your IT team modernize traditional development processes, applying Continuous Integration and Continuous Delivery (CI/CD). Providing cloud infrastructure solutions AWS, GCP, AZURE.",
+                "text_2": "We bring ideas and cloud solutions that allow your business to respond to the most exacting demands using infrastructure as code and adaptable to the need and budget.",
+                "text_3": "We prepare and train DevOps consultants, with several years of experience in the area."
+            },
+            "advice": {
+                "title": "CIBERSECURITY COUNSELING",
+                "text_1": "Data is the most valuable asset that companies possess. They are the material from which they can develop projects and make decisions. In view of this value, it is essential for companies to give them the corresponding levels of security.",
+                "text_2": "Database security is achieved through series of implementations, measurements, and diagnostics. The point of all of this is to make sure that no threat, whether internal or external, can tamper with the data a company works with.",
+                "text_3": "Therefore, we advise companies on safety, current regulations and training."
+            },
+            "outsourcing": {
+                "title": "OUTSOURCING",
+                "text_1": "We are your specialist team in technology and systems outsourcing.",
+                "text_2": "We take care of managing your company's IT infrastructure, helping you minimize risks and reduce costs by providing experience and quality in each  project. In this way you can outsource your technology or IT department.",
+                "text_3": "We focus on specific projects and complete management of the systems area."
+            },
+            "recruitment": {
+                "title": "RECRUITMENT",
+                "text_1": "Our talent adquisition process succeed thanks to our focus on achieving synergy between the personality characteristics, skills and values ​​of people with the organizational culture and preferences of our clients.",
+                "text_2": "We carry out IT recruitment and hiring. Based on the requirements of our customers, we evaluate and profile the candidates who achieve those requirements demanded for the position and thus adapt 100% to your company.",
+                "text_3": ""
+            }
+        },
+        "buttons": {
+            "view": "READ MORE"
+        }
+    },
+    "about_us": {
+        "main": {
+            "about_us_title": "WHO WE ARE",
+            "about_us_text_1": "Passionate about technology and continuous improvement.",
+            "about_us_text_2": "Dream & Do IT is a consulting company in the IT area with more than 4 years of experience.",
+            "vision_title": "OUR VISION, MISION & VALUES",
+            "vision_text_1": "Our objective is to cultivate knowledge, professionalism, efficiency in human potential specialized in computer security, betting on the growth and development of organizations in the search of the talent of the future.",
+            "vision_text_2": "Helping companies adopt technologies to increase agility, reduce costs, maximize performance and meet the challenges of the new digital age."
+        },
+        "cards": {
+            "vision": {
+                "title": "Visión",
+                "text": "To be relevant in the training and employability of talent in the development of computer security operations."
+            },
+            "mision": {
+                "title": "Mision",
+                "text": "We are here to train and provide resources that contribute to the solutions that our clients require."
+            },
+            "values": {
+                "title": "Values",
+                "text": "Responsibility, experience, teamwork, efficiency, continuous improvement, and commitment above all else."
+            }
+        }
+    },
+    "contact": {
+        "main": {
+            "main_title": "LET'S DO SOMETHING AWESOME",
+            "main_text1": "Customer satisfaction is our priority.",
+            "main_text2": "Our support is constantly available to assist you with any questions you have about our work.",
+            "contact_title": "GET IN TOUCH",
+            "contact_text1": "For more information about our services or to set a meeting, leave us your data and an advisor will contact you.",
+            "work_title": "DO YOU WANT TO WORK WITH US?",
+            "work_text1": "If you are looking to join our resource network, please complete the form below."
+        },
+        "form": {
+            "name": "Name",
+            "email": "E-mail",
+            "phone": "Phone",
+            "comments": "Comments",
+            "cv": "CV",
+            "linkedin": "Linkedin",
+            "portfolio": "Portfolio",
+            "cover": "Presentation (Optional)"
+        },
+        "buttons": {
+            "send": "Send"
+        }
+    }
+}
