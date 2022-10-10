@@ -1,11 +1,13 @@
 import { Box, Button, Grid, Typography } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 import HomeImage from '../../assets/HomeTech.png';
 import MobileImage from '../../assets/Home.png';
 import HomeCard from '../../components/Cards/HomeCard';
 import { useImageMultiplier } from '../../store/Main';
+import Navigate from '../../routes/Navigator';
+import { CONTACT } from '../../constants/routePaths';
 
 const background = {
     width: "98.8vw",
@@ -27,6 +29,7 @@ export interface IHomeProps { }
 
 export default function Home(props: IHomeProps) {
     const { imageSizeMultiplier, screenSize } = useImageMultiplier();
+    const nav = useNavigate()
     const { t } = useTranslation();
 
     const CardList = [
@@ -56,7 +59,9 @@ export default function Home(props: IHomeProps) {
         },
     ]
 
-
+    const handleClick = (action: string) => (event: any) => {
+        nav(`${Navigate(action)}`)
+    }
 
     return (
         <Box mb={{ md: 0, sm: 50, xs: 50 }}>
@@ -77,7 +82,7 @@ export default function Home(props: IHomeProps) {
                                     </Typography>
                                 </Grid>
                                 <Grid item container xs={12} mt={{ xl: 5, md: 4, sm: 5, xs: 5 }} justifyContent='center'>
-                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '300px', fontSize: '18px' }}>
+                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '300px', fontSize: '18px' }} onClick={handleClick(CONTACT)}>
                                         {t('home.buttons.ask_about_services')}
                                     </Button>
                                 </Grid>
@@ -119,7 +124,7 @@ export default function Home(props: IHomeProps) {
                                     </Typography>
                                 </Grid>
                                 <Grid item container xs={12} mt={{ xl: 5, md: 4, sm: 5, xs: 5 }} justifyContent='center'>
-                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '180px', fontSize: '20px' }}>
+                                    <Button variant='text' onClick={handleClick(CONTACT)} sx={{ marginTop: '20px', height: '50px', width: '180px', fontSize: '20px' }}>
                                         {t('home.buttons.begin')}
                                     </Button>
                                 </Grid>
@@ -149,7 +154,7 @@ export default function Home(props: IHomeProps) {
                                     <Grid item xs={6.5} />
                                     <Grid item xs={0.5} />
                                     <Grid item container xs={7} mt={{ xl: 5, md: 4, sm: 2 }}>
-                                        <Button variant='outlined' sx={{ height: '3vw', width: '22vw', fontSize: '1.1vw' }}>
+                                        <Button variant='outlined' sx={{ height: '3vw', width: '22vw', fontSize: '1.1vw' }} onClick={handleClick(CONTACT)}>
                                             {t('home.buttons.ask_about_services')}
                                         </Button>
                                     </Grid>
@@ -207,7 +212,7 @@ export default function Home(props: IHomeProps) {
                                     <Grid item xs={2} />
                                     <Grid item xs={2} />
                                     <Grid item container xs={8} justifyContent='center'>
-                                        <Button variant='outlined' sx={{ marginTop: '70px', height: '4vw', width: '18vw', fontSize: '1.2vw' }}>
+                                        <Button variant='outlined' sx={{ marginTop: '70px', height: '4vw', width: '18vw', fontSize: '1.2vw' }} onClick={handleClick(CONTACT)}>
                                             {t('home.buttons.begin')}
                                         </Button>
                                     </Grid>

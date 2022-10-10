@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, Typography, IconButton, Toolbar, Box, AppBar, MenuItem, Button, Switch, Stack, Drawer, useTheme, Grid } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import logo from '../../assets/logo-dream-do-it-dark.svg';
@@ -28,9 +28,14 @@ export const TopMenu = () => {
   const [anchorElNav, setAnchorElNav] = useState(false);
   const [visited, setVisited] = useState<string>('/')
   const { t, i18n } = useTranslation();
+  const URL = useLocation();
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.only('xs'))
   const tablet = useMediaQuery(theme.breakpoints.only('sm'))
+
+  useEffect(() => {
+    setVisited(URL.pathname.replace('/', ''))
+  }, [URL])
 
   const pages = [
     {

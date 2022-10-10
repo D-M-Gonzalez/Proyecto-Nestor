@@ -77,9 +77,6 @@ export const customTheme = createTheme({
                         transition: '0s',
                         lineHeight: '27.28px',
                         fontFamily: 'Nunito Sans',
-                        '&:focus': {
-                            color: 'black'
-                        },
                         '&:hover': {
                             borderRadius: '10px',
                             borderStyle: 'solid',

@@ -116,18 +116,16 @@ export default function Footer(FooterProps: FooterProps) {
                             })}
                             <Grid item container xs={2} />
                         </Grid>
-                        <Grid item container xs={12}>
-                            <Box>
-                                <Grid container>
-                                    {ContactList.map((item) => {
-                                        return (
-                                            <Grid item container xs={12} key={item.id} justifyContent='center'>
-                                                {item.component}
-                                            </Grid>
-                                        )
-                                    })}
-                                </Grid>
-                            </Box>
+                        <Grid item container xs={12} alignContent='center'>
+                            <Grid container>
+                                {ContactList.map((item) => {
+                                    return (
+                                        <Grid item container xs={12} key={item.id} justifyContent='center'>
+                                            {item.component}
+                                        </Grid>
+                                    )
+                                })}
+                            </Grid>
                         </Grid>
                     </Grid>
                 </Box>

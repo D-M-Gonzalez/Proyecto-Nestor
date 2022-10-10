@@ -247,7 +247,7 @@ export default function Services(props: IServicesProps) {
                                     <Button
                                         variant='text'
                                         sx={{ marginTop: '20px', height: '50px', width: '130px', fontSize: '20px' }}
-                                        onClick={handleSubmit('contact')}
+                                        onClick={handleSubmit('work')}
                                     >
                                         {t('contact.buttons.send')}
                                     </Button>
