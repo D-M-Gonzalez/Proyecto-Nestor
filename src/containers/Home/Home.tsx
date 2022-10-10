@@ -76,7 +76,7 @@ export default function Home(props: IHomeProps) {
                                     </Typography>
                                 </Grid>
                                 <Grid item container xs={12} mt={{ xl: 5, md: 4, sm: 5, xs: 5 }} justifyContent='center'>
-                                    <Button variant='outlined' sx={{ height: '30px', width: '200px', fontSize: '12px' }}>
+                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '250px', fontSize: '20px' }}>
                                         {t('home.buttons.ask_about_services')}
                                     </Button>
                                 </Grid>
@@ -118,7 +118,7 @@ export default function Home(props: IHomeProps) {
                                     </Typography>
                                 </Grid>
                                 <Grid item container xs={12} mt={{ xl: 5, md: 4, sm: 5, xs: 5 }} justifyContent='center'>
-                                    <Button variant='outlined' sx={{ height: '30px', width: '200px', fontSize: '12px' }}>
+                                    <Button variant='text' sx={{ marginTop: '20px', height: '50px', width: '180px', fontSize: '20px' }}>
                                         {t('home.buttons.begin')}
                                     </Button>
                                 </Grid>

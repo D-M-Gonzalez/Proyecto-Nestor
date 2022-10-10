@@ -90,6 +90,35 @@ export const customTheme = createTheme({
                             borderColor: 'rgb(255,255,255,0)'
                         }
                     }
+                },
+                {
+                    props: { variant: 'text' },
+                    style: {
+                        borderRadius: '10px',
+                        borderStyle: 'solid',
+                        borderWidth: '2px',
+                        borderColor: '#22B573',
+                        textTransform: 'unset',
+                        padding: '4px',
+                        paddingLeft: '20px',
+                        paddingRight: '20px',
+                        color: '#22B573',
+                        fontSize: '20px',
+                        fontWeight: '600',
+                        transition: '0s',
+                        lineHeight: '27.28px',
+                        fontFamily: 'Nunito Sans',
+                        '&:focus': {
+                            color: 'black'
+                        },
+                        '&:hover': {
+                            borderRadius: '10px',
+                            borderStyle: 'solid',
+                            borderWidth: '2px',
+                            borderColor: '#22B573',
+                            color: '#22B573'
+                        }
+                    }
                 }
             ]
         },

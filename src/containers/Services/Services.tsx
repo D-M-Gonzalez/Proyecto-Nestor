@@ -4,25 +4,29 @@ import ServiceCard from '../../components/Cards/ServiceCard';
 import { useImageMultiplier } from '../../store/Main';
 import { Box, Grid, Typography } from '@mui/material';
 import ServiceHero from '../../assets/servicios-dream-do-it.png';
-import { NONAME } from 'dns';
+import MobileImage from '../../assets/ServiciosMobile.png';
+import ServiceCardMobile from '../../components/Cards/ServiceCardMobile';
 
 const imageHero = {
     width: "auto",
     height: "50vw",
     backgroundImage: `url(${ServiceHero})`,
     backgroundSize: 'cover',
+}
 
+const imageMobile = {
+    width: "auto",
+    height: "50vw",
+    backgroundImage: `url(${MobileImage})`,
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
 }
 
 export interface IServicesProps { }
 
 export default function Services(props: IServicesProps) {
-    const { imageSizeMultiplier } = useImageMultiplier();
+    const { imageSizeMultiplier, screenSize } = useImageMultiplier();
     const { t } = useTranslation();
-
-    useEffect(() => {
-        console.log(imageSizeMultiplier)
-    })
 
     const CardList = [
         {
@@ -58,28 +62,55 @@ export default function Services(props: IServicesProps) {
 
     return (
         <Box mb={60}>
-            <Box style={imageHero} >
-                <Box display="flex" mt={10}>
-                    <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 30 }}>
-                        <Grid item xs={0.5} />
-                        <Grid item container xs={10}>
-                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 25 }} fontWeight={400} lineHeight={1.5}>
+            {(screenSize === 'xs' || screenSize === 'sm') ?
+                <Box>
+                    <Box style={imageMobile} mt={10} />
+                    <Grid container mt={{ sm: 5, xs: 3 }}>
+                        <Grid item container xs={12} mx={5}>
+                            <Typography fontFamily='IntegralCF' color='white' fontSize={{ sm: 25, xs: 20 }} fontWeight={400} lineHeight={1.5}>
                                 {t('services.main.services_title')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 22 }} fontWeight={400} lineHeight={1.2}>
+                        </Grid>
+                        <Grid item container xs={12} mx={5}>
+                            <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ sm: 2, xs: 1 }} fontSize={{ sm: 15, xs: 13 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_1')}
                             </Typography>
-                            <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 22 }} fontWeight={400} lineHeight={1.2}>
+                        </Grid>
+                        <Grid item container xs={12} mx={5}>
+                            <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ sm: 15, xs: 13 }} fontWeight={400} lineHeight={1.2}>
                                 {t('services.main.services_text_2')}
                             </Typography>
                         </Grid>
                     </Grid>
+                    <Box display='flex' justifyItems='center' flexDirection='column'>
+                        {CardList.map((card) => (<ServiceCardMobile key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
+                    </Box>
                 </Box>
-
-            </Box>
-            <Box mt={{ md: 6, sm: 5, xs: 50 }}>
-                {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
-            </Box>
+                :
+                <Box>
+                    <Box style={imageHero}>
+                        <Box display="flex" mt={10}>
+                            <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
+                                <Grid item xs={0.5} />
+                                <Grid item container xs={5}>
+                                    <Typography fontFamily='IntegralCF' color='white' fontSize={{ xl: 70, lg: 40, md: 30, xs: 20 }} fontWeight={400} lineHeight={1.5}>
+                                        {t('services.main.services_title')}
+                                    </Typography>
+                                    <Typography fontFamily='Nunito Sans' color='#22B573' mt={{ xl: 5, lg: 4, md: 3, sm: 2, xs: 1 }} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                                        {t('services.main.services_text_1')}
+                                    </Typography>
+                                    <Typography fontFamily='Nunito Sans' color='white' mt={1} fontSize={{ xl: 30, lg: 20, md: 15, xs: 10 }} fontWeight={400} lineHeight={1.2}>
+                                        {t('services.main.services_text_2')}
+                                    </Typography>
+                                </Grid>
+                            </Grid>
+                        </Box>
+                    </Box>
+                    <Box >
+                        {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
+                    </Box>
+                </Box>
+            }
         </Box>
     );
 }

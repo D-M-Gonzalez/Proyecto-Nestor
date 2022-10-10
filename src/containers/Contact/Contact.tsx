@@ -189,8 +189,8 @@ export default function Services(props: IServicesProps) {
                                 })}
                                 <Grid item container xs={12} justifyContent='flex-end' mr={20}>
                                     <Button
-                                        variant='outlined'
-                                        sx={{ marginTop: '20px', height: '50px', width: '130px', fontSize: '25px' }}
+                                        variant='text'
+                                        sx={{ marginTop: '20px', height: '50px', width: '130px', fontSize: '20px' }}
                                         onClick={handleSubmit('contact')}
                                     >
                                         {t('contact.buttons.send')}
@@ -243,8 +243,8 @@ export default function Services(props: IServicesProps) {
                                 })}
                                 <Grid item container xs={12} justifyContent='flex-end' mr={20}>
                                     <Button
-                                        variant='outlined'
-                                        sx={{ marginTop: '20px', height: '50px', width: '130px', fontSize: '25px' }}
+                                        variant='text'
+                                        sx={{ marginTop: '20px', height: '50px', width: '130px', fontSize: '20px' }}
                                         onClick={handleSubmit('contact')}
                                     >
                                         {t('contact.buttons.send')}

@@ -88,6 +88,9 @@
                 "text_2": "Realizamos reclutamiento y contratación IT. ",
                 "text_3": "En base a las características requeridas por nuestros clientes, evaluamos y perfilamos a los candidatos que cumplan con los requisitos demandados para el puesto y así se adapten 100% a tu empresa."
             }
+        },
+        "buttons": {
+            "view": "READ MORE"
         }
     },
     "about_us": {

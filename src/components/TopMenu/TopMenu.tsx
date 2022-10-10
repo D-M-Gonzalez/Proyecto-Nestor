@@ -26,7 +26,7 @@ const drawerItemStyles = {
 export const TopMenu = () => {
 
   const [anchorElNav, setAnchorElNav] = useState(false);
-  const [visited, setVisited] = useState<string>('')
+  const [visited, setVisited] = useState<string>('/')
   const { t, i18n } = useTranslation();
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.only('xs'))
@@ -175,17 +175,20 @@ export const TopMenu = () => {
           >
           </Typography>
           <Box sx={{ flexGrow: 1, justifyContent: 'center', display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
-                <Button
-                  onClick={handleCloseNavMenu(page.url)}
-                  sx={{ mx: 1, display: 'block', fontSize: '2vw', backgroundColor: (visited === page.url ? '#22B573' : '#0A1128') }}
-                  variant={page.variant as keyof typeof Button}
-                >
-                  <Typography fontSize={{ xl: 35, lg: 30, md: 16 }} sx={{ color: (visited === page.url ? '#FFF' : page.color) }}>{page.title}</Typography>
-                </Button>
-              </Link>
-            ))}
+            {pages.map((page) => {
+              return (
+                <Link to={page.url} key={page.key} style={{ textDecoration: "none", color: "#fff" }}>
+                  <Button
+                    onClick={handleCloseNavMenu(page.url)}
+                    sx={{ mx: 1, display: 'block', fontSize: '2vw', backgroundColor: (visited === page.url ? '#22B573' : '#0A1128') }}
+                    variant={page.variant as keyof typeof Button}
+                  >
+                    <Typography fontSize={{ xl: 35, lg: 30, md: 16 }} sx={{ color: (visited === page.url ? '#FFF' : page.color) }}>{page.title}</Typography>
+                  </Button>
+                </Link>
+              )
+            }
+            )}
           </Box>
           {!mobile && !tablet && (
             <Box>
