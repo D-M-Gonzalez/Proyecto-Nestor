@@ -7,6 +7,8 @@ import MobileImage from '../../assets/ContactoMobile.png';
 import { sendMail } from '../../controllers/mailController';
 import { WHATSAPP } from '../../constants/routePaths';
 import WPIcon from '../../components/Icons/WPIcon';
+import { useNavigate } from 'react-router-dom';
+import Navigate from '../../routes/Navigator';
 
 const imageHero = {
     width: "98.8vw",
@@ -89,7 +91,7 @@ export default function Services(props: IServicesProps) {
     }
 
     const handleClick = () => {
-
+        window.open(`${Navigate(WHATSAPP, 'Hola, quisiera obtener información acerca de DREAM DO IT')}`)
     }
 
     const contactFormInputs = [

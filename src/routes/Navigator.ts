@@ -4,7 +4,7 @@ export interface INavigate {
     Navigate: (param: string) => any;
 }
 
-export default function Navigate(URL: string) {
+export default function Navigate(URL: string, text?: string) {
     let rURL: String = '';
     switch (URL) {
         case 'HOME':
@@ -20,19 +20,19 @@ export default function Navigate(URL: string) {
             rURL = '/contact';
             break;
         case 'FACEBOOK':
-            rURL = 'https://google.com/';
+            rURL = 'https://www.facebook.com/we.dreamdoit';
             break;
         case 'INSTAGRAM':
-            rURL = 'https://google.com/';
+            rURL = 'https://www.instagram.com/we.dreamdoit/';
             break;
         case 'TWITTER':
-            rURL = 'https://google.com/';
+            rURL = 'https://twitter.com/we_dreamdoit';
             break;
         case 'LINKEDIN':
-            rURL = 'https://google.com/';
+            rURL = 'https://www.linkedin.com/company/dream-doit/';
             break;
         case 'WHATSAPP':
-            rURL = 'https://google.com/';
+            rURL = `https://wa.me/+5491130748591/?text=${text}`;
             break;
         default:
             break;
