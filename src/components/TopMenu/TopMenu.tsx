@@ -150,7 +150,6 @@ export const TopMenu = () => {
                     <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>ES</Typography>
                     <Box>
                       <Switch
-                        defaultChecked
                         onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
                         sx={{ mx: '5px' }}
                       />
@@ -202,7 +201,6 @@ export const TopMenu = () => {
                 <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
                 <Box>
                   <Switch
-                    defaultChecked
                     onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
                     sx={{ mx: '5px' }}
                   />
