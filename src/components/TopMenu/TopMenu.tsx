@@ -26,6 +26,7 @@ const drawerItemStyles = {
 export const TopMenu = () => {
 
   const [anchorElNav, setAnchorElNav] = useState(false);
+  const [boolLang, setBoolLang] = useState(false)
   const [visited, setVisited] = useState<string>('/')
   const { t, i18n } = useTranslation();
   const URL = useLocation();
@@ -79,6 +80,7 @@ export const TopMenu = () => {
 
   const handleLanguaje = (languaje: string) => {
     i18n.changeLanguage(languaje)
+    setBoolLang(!boolLang)
   }
 
   const handleCloseNavMenu = (url: string) => () => {
@@ -150,6 +152,7 @@ export const TopMenu = () => {
                     <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }} sx={{ color: '#22B573' }}>ES</Typography>
                     <Box>
                       <Switch
+                        checked={boolLang}
                         onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
                         sx={{ mx: '5px' }}
                       />
@@ -201,6 +204,7 @@ export const TopMenu = () => {
                 <Typography fontSize={{ xl: 20, lg: 18, md: 15, sm: 15, xs: 15 }}>ES</Typography>
                 <Box>
                   <Switch
+                    checked={boolLang}
                     onChange={(event, boolean) => (!boolean ? handleLanguaje('es') : handleLanguaje('en'))}
                     sx={{ mx: '5px' }}
                   />

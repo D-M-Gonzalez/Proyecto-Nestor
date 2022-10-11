@@ -130,7 +130,7 @@ export default function Footer(FooterProps: FooterProps) {
                         </Grid>
                         <Grid item container xs={12} justifyContent="center">
                             <Box>
-                                <IconButton onClick={() => handleClick(WHATSAPP, true)} sx={styles.socialMediaButtonsStyle}><WPIcon sx={{ height: '40px', width: '30px' }} /><Typography variant='main' fontSize={styles.mainTextSize} ml={2} sx={{ color: '#22B573' }}>Click aquí para Whatsapp</Typography></IconButton>
+                                <IconButton onClick={() => handleClick(WHATSAPP, true)} sx={styles.socialMediaButtonsStyle}><WPIcon sx={{ height: '40px', width: '30px' }} /><Typography variant='main' fontSize={styles.mainTextSize} ml={2} sx={{ color: '#22B573' }}>{t('footer.wp')}</Typography></IconButton>
                             </Box>
                         </Grid>
                     </Grid>

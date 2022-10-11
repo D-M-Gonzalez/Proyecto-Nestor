@@ -6,7 +6,8 @@
         "contact": "Contacto"
     },
     "footer": {
-        "menu": "Menu"
+        "menu": "Menu",
+        "wp": "Click aquí para WhatsApp"
     },
     "home": {
         "main": {
@@ -138,7 +139,8 @@
             "cover": "Presentación (Opcional)"
         },
         "buttons": {
-            "send": "Enviar"
+            "send": "Enviar",
+            "wp": "Envíanos un WhatsApp"
         }
     }
 }

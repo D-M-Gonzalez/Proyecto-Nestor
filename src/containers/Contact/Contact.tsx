@@ -439,7 +439,7 @@ export default function Services(props: IServicesProps) {
                                         sx={{ color: '#FFF' }}
                                         fontSize={{ xl: 55, lg: 45, md: 35 }}
                                     >
-                                        Envíanos un WhatsApp
+                                        {t('contact.buttons.wp')}
                                     </Typography>
                                 </Button>
                             </Box>
