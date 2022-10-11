@@ -1,16 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useImageMultiplier } from '../../store/Main';
-import { Box, Button, Grid, TextField, TextFieldProps, Typography } from '@mui/material';
+import { Box, Button, Grid, IconButton, TextField, TextFieldProps, Typography } from '@mui/material';
 import ContactHero from '../../assets/Contacto.png';
 import MobileImage from '../../assets/ContactoMobile.png';
 import { sendMail } from '../../controllers/mailController';
+import { WHATSAPP } from '../../constants/routePaths';
+import WPIcon from '../../components/Icons/WPIcon';
 
 const imageHero = {
     width: "98.8vw",
-    height: "250vw",
+    height: "260vw",
     maxHeight: '3500px',
-    minHeight: '2600px',
+    minHeight: '2800px',
     backgroundImage: `url(${ContactHero})`,
     backgroundSize: 'cover',
 }
@@ -31,6 +33,13 @@ const filledStyles = {
     color: 'white',
     backgroundColor: 'rgb(255,255,255,0.15)',
     borderRadius: '8px'
+}
+
+const styles = {
+    socialMediaButtonsStyle: {
+        transition: 'filter 0.25s',
+        '&:hover': { filter: 'brightness(150%)' }
+    },
 }
 
 const inputStyles = {
@@ -77,6 +86,10 @@ export default function Services(props: IServicesProps) {
 
     const handleSubmit = (type: string) => (event: React.MouseEvent) => {
         type === 'contact' ? sendMail(contactFormData, 'contact') : sendMail(workFormData, 'work')
+    }
+
+    const handleClick = () => {
+
     }
 
     const contactFormInputs = [
@@ -407,6 +420,28 @@ export default function Services(props: IServicesProps) {
                                 </Grid>
                             </Grid>
                         </Box>
+                        <Grid item container xs={12} mt={{ xl: 10, lg: 10, md: 10 }} justifyContent="center">
+                            <Box>
+                                <Button
+                                    onClick={handleClick}
+                                    sx={{
+                                        transition: 'filter 0.25s',
+                                        '&:hover': { filter: 'brightness(150%)' },
+                                        p: '30px'
+                                    }}
+                                >
+                                    <WPIcon sx={{ height: '6vw', width: '6vw' }} />
+                                    <Typography
+                                        variant='main'
+                                        ml={2}
+                                        sx={{ color: '#FFF' }}
+                                        fontSize={{ xl: 55, lg: 45, md: 35 }}
+                                    >
+                                        Envíanos un WhatsApp
+                                    </Typography>
+                                </Button>
+                            </Box>
+                        </Grid>
                     </div>
                 </Box>
             }

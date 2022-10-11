@@ -31,6 +31,9 @@ export default function Navigate(URL: string) {
         case 'LINKEDIN':
             rURL = 'https://google.com/';
             break;
+        case 'WHATSAPP':
+            rURL = 'https://google.com/';
+            break;
         default:
             break;
     }

@@ -6,3 +6,4 @@ export const FACEBOOK = 'FACEBOOK';
 export const LINKEDIN = 'LINKEDIN';
 export const TWITTER = 'TWITTER';
 export const INSTAGRAM = 'INSTAGRAM';
+export const WHATSAPP = 'WHATSAPP';

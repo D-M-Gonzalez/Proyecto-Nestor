@@ -4,7 +4,8 @@ import FBIcon from '../Icons/FBIcon';
 import LNIcon from '../Icons/LNIcon';
 import TWIcon from '../Icons/TWIcon';
 import IMIcon from '../Icons/IMIcon';
-import { HOME, SERVICES, CONTACT, ABOUT_US, FACEBOOK, LINKEDIN, INSTAGRAM, TWITTER } from '../../constants/routePaths';
+import WPIcon from '../Icons/WPIcon';
+import { HOME, SERVICES, CONTACT, ABOUT_US, FACEBOOK, LINKEDIN, INSTAGRAM, TWITTER, WHATSAPP } from '../../constants/routePaths';
 
 export interface FooterProps {
     handleClick: (link: string, external?: boolean) => void
@@ -100,7 +101,7 @@ export default function Footer(FooterProps: FooterProps) {
 
 
     return (
-        <Box position='relative' bottom='200px' sx={{ height: '0px' }}>
+        <Box position='relative' bottom={(mobile || tablet) ? '250px' : '200px'} sx={{ height: '0px' }}>
             {(mobile || tablet) ?
                 <Box>
                     <Box sx={{ marginX: '5vw', backgroundColor: 'rgb(207, 211, 207, 0.5)', height: '2px' }} />
@@ -126,6 +127,11 @@ export default function Footer(FooterProps: FooterProps) {
                                     )
                                 })}
                             </Grid>
+                        </Grid>
+                        <Grid item container xs={12} justifyContent="center">
+                            <Box>
+                                <IconButton onClick={() => handleClick(WHATSAPP, true)} sx={styles.socialMediaButtonsStyle}><WPIcon sx={{ height: '40px', width: '30px' }} /><Typography variant='main' fontSize={styles.mainTextSize} ml={2} sx={{ color: '#22B573' }}>Click aquí para Whatsapp</Typography></IconButton>
+                            </Box>
                         </Grid>
                     </Grid>
                 </Box>
