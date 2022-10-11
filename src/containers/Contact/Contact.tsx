@@ -91,7 +91,7 @@ export default function Services(props: IServicesProps) {
     }
 
     const handleClick = () => {
-        window.open(`${Navigate(WHATSAPP, 'Hola, quisiera obtener información acerca de DREAM DO IT')}`)
+        window.open(`${Navigate(WHATSAPP)}`)
     }
 
     const contactFormInputs = [

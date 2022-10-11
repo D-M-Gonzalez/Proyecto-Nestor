@@ -4,7 +4,7 @@ export interface INavigate {
     Navigate: (param: string) => any;
 }
 
-export default function Navigate(URL: string, text?: string) {
+export default function Navigate(URL: string) {
     let rURL: String = '';
     switch (URL) {
         case 'HOME':
@@ -32,7 +32,7 @@ export default function Navigate(URL: string, text?: string) {
             rURL = 'https://www.linkedin.com/company/dream-doit/';
             break;
         case 'WHATSAPP':
-            rURL = `https://wa.me/+5491130748591/?text=${text}`;
+            rURL = `https://wa.me/+5491130748591/?text=Hola, quisiera obtener información acerca de DREAM DO IT`;
             break;
         default:
             break;
