@@ -130,7 +130,7 @@ export default function AboutUs(props: IAboutUsProps) {
                                 </Grid>
                             </Grid>
                         </Box>
-                        <Box display="flex" mt={{ xl: 45, lg: 40, md: 40 }}>
+                        <Box display="flex" mt={{ xl: 60, lg: 40, md: 40 }}>
                             <Grid container>
                                 <Grid item xs={0.5} />
                                 <Grid item container xs={6}>

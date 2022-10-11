@@ -295,7 +295,7 @@ export default function Services(props: IServicesProps) {
                                 </Grid>
                             </Grid>
                         </Box>
-                        <Box display="flex" mt={{ xl: 30, lg: 30, md: 25, sm: 25, xs: 10 }}>
+                        <Box display="flex" mt={{ xl: 50, lg: 30, md: 25, sm: 25, xs: 10 }}>
                             <Grid container mt={{ xl: 8, lg: 8, md: 6, sm: 5, xs: 3 }}>
                                 <Grid item xs={0.5} />
                                 <Grid item container xs={5}>

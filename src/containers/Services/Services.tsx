@@ -112,7 +112,7 @@ export default function Services(props: IServicesProps) {
                                 </Grid>
                             </Grid>
                         </Box>
-                        <Box mt={{ xl: 40, lg: 25, md: 20 }}>
+                        <Box mt={{ xl: 50, lg: 25, md: 20 }}>
                             {CardList.map((card) => (<ServiceCard key={card.id} title={card.title} text={card.text} image={card.image} reverse={card.reverse} />))}
                         </Box>
                     </div>
